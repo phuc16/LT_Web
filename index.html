@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,40 +10,196 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
 </head>
-
-<body>
-    <main>
-        <div class="header">
-
-            <div class="nav">
-                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-                <div class="nav-link" id="navlink">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">PRODUCT</a></li>
-                        <li><a href="">NEWS</a></li>
-                        <li><a href="">DETAIL</a></li>
-                        <li><a href="">CONTACT</a></li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-            </div>
-
-            <div class="content">
-                <h1>Multilevel Company</h1>
-                <p>
-                    We only do great things here. You just need to pay 1$, someday it will be 1m $. <br/>Just belive us, success will find you.
-                </p>
-                <a href="" class="visit-btn">Visit us to know more</a>
+<body>  
+    <div class="container">
+        <div class="account-bar">
+            <div class="acc">
+                <ul>
+                    <li><a href="">Account</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
             </div>
         </div>
-    </main>
+        <div class="header">
+            <a href=""><img src="img/logo.png" alt=""></a>
+            <div class="nav">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">NEWS</a></li>
+                    <li><a href="">PRODUCT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">CART</a></li>
+                    <li>
+                        <div class="search-box" id="header-searchbox">
+                            <input class="search-txt" id="header-searchtxt" type="text" name="" placeholder="Type to search">
+                            <a href="#" class="search-btn">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <!-- <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
+                </ul>
+            </div>
 
+        </div>
+        <div class="slider">
+            <div class="product-slider-box" id="pdSliderBox">
+                <div class="dieu-huong">
+                    <i class="fa fa-chevron-circle-left" onclick="Back()";></i>
+                    <i class="fa fa-chevron-circle-right" onclick="Next()";></i>
+                </div>
+                <div class="product-slider" id="pdSlider">
+                    <div class="col1"><a href=""><img src="img/mayin-slide.png" alt=""> <span>Máy in</span> </a></div>
+                    <div class="col1"><a href=""><img src="img/mouse-slide.png" alt=""> <span>Phụ kiện </span> </a></div>
+                    <div class="col1"><a href=""><img src="img/giotnuoc-slide.png" alt=""> <span>Mực in</span> </a></div>
+                    <div class="col1"><a href=""><img src="img/muccaocap-slide.png" alt=""> <span>Mực in chính hãng</span> </a></div>
+                    <div class="col1"><a href=""><img src="img/laptop-slide.png" alt=""> <span>Thiết bị công nghệ</span> </a></div>
+                    <div class="col1"><a href=""><img src="img/Khac-slide.png" alt=""> <span>Khác</span> </a></div>
+
+                </div>
+                
+            </div>
+            <div class="intro-slider-box">
+                <div class="dieu-huong">
+                    <i class="fa fa-chevron-circle-left" onclick="BackIntro()";></i>
+                    <i class="fa fa-chevron-circle-right" onclick="NextIntro()";></i>
+                </div>
+                <div class="intro-slider" id="introSl">
+                    <img src="img/vp1.jpg" alt="" class="intro-img" id="vp1">
+                    <img src="img/vp2.jpg" alt="" class="intro-img" id="vp2">
+                    <img src="img/vp3.jpg" alt="" class="intro-img" id="vp3">
+                </div>
+            </div>
+        </div>
+        <div class="sale-product">
+            <div class="sp-title">
+                <h2>Sản phẩm bán chạy</h2>
+            </div>
+            <div class="sp-content">
+                <a href="">
+                    <div class="col1">
+                        <div class="sp-img">
+                            <img src="img/mayin1.jpg" alt="">
+                        </div>
+                        <div class="sp-info">
+                            <span>Máy in </span>
+                            <span>Giá: 1.000.000VNĐ</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="col1">
+                        <div class="sp-img">
+                            <img src="img/mayin1.jpg" alt="">
+                        </div>
+                        <div class="sp-info">
+                            <span>Máy in </span>
+                            <span>Giá: 1.000.000VNĐ</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="col1">
+                        <div class="sp-img">
+                            <img src="img/mayin1.jpg" alt="">
+                        </div>
+                        <div class="sp-info">
+                            <span>Máy in </span>
+                            <span>Giá: 1.000.000VNĐ</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="col1">
+                        <div class="sp-img">
+                            <img src="img/mayin1.jpg" alt="">
+                        </div>
+                        <div class="sp-info">
+                            <span>Máy in </span>
+                            <span>Giá: 1.000.000VNĐ</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="col1">
+                        <div class="sp-img">
+                            <img src="img/mayin1.jpg" alt="">
+                        </div>
+                        <div class="sp-info">
+                            <span>Máy in </span>
+                            <span>Giá: 1.000.000VNĐ</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="col1">
+                        <div class="sp-img">
+                            <img src="img/mayin1.jpg" alt="">
+                        </div>
+                        <div class="sp-info">
+                            <span>Máy in </span>
+                            <span>Giá: 1.000.000VNĐ</span>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+        <div class="contact">
+            <div class="ct-content info">
+                <h2>Thông tin liên hệ</h2>
+                <ul>
+                    <li> <a href="">268 Lý Thường Kiệt, Phường 14, Quận 10, Thành phố Hồ Chí Minh</a></li>
+                    <li> <a href="">+842838647256</a> </li>
+                    <li> <a href="">chau.nguyen1910865@gmail.com</a></li>
+                </ul>
+                <div class="contact-icon">
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a> 
+                    <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a> 
+                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+                </div>
+            </div>
+            <div class="ct-content list">
+                <h2>Danh mục</h2>
+                <ul>
+                    <li> <a href="">Máy in</a></li>
+                    <li> <a href="">Phụ kiện </a> </li>
+                    <li> <a href="">Mực in</a></li>
+                    <li> <a href="">Mực in chính hãng</a></li>
+                    <li> <a href="">Thiết bị công nghệ</a> </li>
+                    <li> <a href="">Khác</a></li>
+                </ul>
+            </div>
+            <div class="ct-content best-sale">
+                <h2>Sản phẩm bán chạy</h2>
+                <ul>
+                    <li><a href=""><img src="img/mayin1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/mayin1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/mayin1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/mayin1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/mayin1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/mayin1.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="ct-content payment">
+                <h2>Hinh thuc thanh toan</h2>
+                <ul>
+                    <li><a href=""><img src="img/visa.png" alt=""></a></li>
+                    <li><a href=""><img src="img/visa.png" alt=""></a></li>
+                    <li><a href=""><img src="img/visa.png" alt=""></a></li>
+                    <li><a href=""><img src="img/visa.png" alt=""></a></li>
+                    
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    
 </body>
-<script src="script.js"></script>
 
+<script src="script.js"></script>
 </html>
