@@ -7,3 +7,7 @@ function showMenu() {
 function hideMenu() {
     navLink.style.right = "-200px";
 }
+
+function logIn(){
+    alert("Tên đăng nhập hoặc mật khẩu không tồn tại!")
+}

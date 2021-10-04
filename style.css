@@ -515,3 +515,13 @@
     width: 33.333%;
 }
 
+
+.forgot a{
+    color: #334862;
+    text-decoration: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: #353535;
+}
