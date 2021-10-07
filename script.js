@@ -9,10 +9,6 @@ function hideMenu() {
 }
 
 
-function logIn() {
-    alert("Tên đăng nhập hoặc mật khẩu không tồn tại!")
-}
-
 
 (function() {
     var forms = document.querySelectorAll(".needs-validation");
