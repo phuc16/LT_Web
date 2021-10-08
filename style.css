@@ -1,18 +1,16 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Be Vietnam Pro', sans-serif; ;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    ;
 }
 
-.container
-{
+.container {
     width: 100%;
 }
 
-.container .account-bar
-{
+.container .account-bar {
     display: flex;
     justify-content: right;
     padding: 0;
@@ -21,65 +19,59 @@
     height: 3%;
 }
 
-.container .acc
-{
-    
+.container .acc {
     text-align: right;
 }
-.acc ul
-{
-    margin-right:30px;
+
+.acc ul {
+    margin-right: 30px;
 }
-.acc ul li
-{
+
+.acc ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
 }
 
-.acc ul li a
-{
+.acc ul li a {
     color: white;
     text-decoration: none;
 }
 
+
 /* HEADER */
 
-.header
-{
+.header {
     position: relative;
     height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: space-between;
-    padding: 1% 10% 0 5% ;
-    align-items: center;    
+    padding: 1% 10% 0 5%;
+    align-items: center;
     z-index: 100;
 }
 
-.header img
-{
+.header img {
     width: 100px;
     margin-top: 10px;
 }
 
-.header .nav
-{
+.header .nav {
     flex: 1;
     text-align: right;
 }
-.header
-{
+
+.header {
     justify-content: center;
 }
 
-.nav ul
-{
+.nav ul {
     height: 8vh;
 }
-.nav ul li
-{
+
+.nav ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
@@ -89,43 +81,39 @@
     line-height: 4.5vh;
 }
 
-.nav ul li a:hover
-{
+.nav ul li a:hover {
     color: red;
-    
 }
 
-.nav a
-{
+.nav a {
     text-decoration: none;
     color: gray;
-    
 }
+
 
 /* SEACRCHING */
 
-.header .search-box
-{
+.header .search-box {
     position: relative;
     background-color: gray;
     height: 4.5vh;
     border-radius: 40px;
     z-index: 1000;
 }
-#header-searchbox:hover>#header-searchtxt
-{
-    width: 22vh; 
+
+#header-searchbox:hover>#header-searchtxt {
+    width: 22vh;
     padding: 0 3vh;
 }
-.nav .search-box .search-btn
-{
+
+.nav .search-box .search-btn {
     position: relative;
     float: right;
     color: white;
     width: 4.5vh;
     height: 4.5vh;
     border-radius: 50%;
-    background: gray;   
+    background: gray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,8 +122,7 @@
     z-index: 10;
 }
 
-.nav .search-box .search-txt
-{
+.nav .search-box .search-txt {
     position: relative;
     border: none;
     background: none;
@@ -150,64 +137,54 @@
     transform: translateY(-50%);
     transition: 0.5s;
     width: 0vh;
-
 }
 
-.nav .search-box .search-txt::placeholder
-{
+.nav .search-box .search-txt::placeholder {
     color: azure;
 }
 
 
 /* SLIDER */
-.slider
-{
+
+.slider {
     position: relative;
     width: 100%;
     height: 70vh;
 }
-.product-slider-box
-{
+
+.product-slider-box {
     border-radius: 10px;
     border: 2px solid gray;
-    background-color:white;
+    background-color: white;
     position: relative;
     width: 900px;
     margin-top: 0 auto;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
-    z-index: 1; 
+    z-index: 1;
 }
 
-.product-slider
-{
-      
+.product-slider {
     width: 9999px;
     height: 80px;
-    transition: 1s; 
+    transition: 1s;
 }
 
-.product-slider div
-{
+.product-slider div {
     display: block;
     float: left;
     font-weight: bold;
     width: 300px;
     height: 70px;
     text-align: center;
-    
 }
 
-.product-slider div:not(:last-child)
-{
+.product-slider div:not(:last-child) {
     border-right: 1px solid black;
 }
 
-
-
-.product-slider-box .dieu-huong
-{
+.product-slider-box .dieu-huong {
     width: 100%;
     position: absolute;
     font-size: 24px;
@@ -216,46 +193,35 @@
     z-index: 10;
 }
 
-
-.product-slider-box .dieu-huong i:first-child
-{
+.product-slider-box .dieu-huong i:first-child {
     position: relative;
-    left:   5%;
+    left: 5%;
     cursor: pointer;
-    
 }
 
-.product-slider-box .dieu-huong i:last-child
-{
+.product-slider-box .dieu-huong i:last-child {
     position: relative;
     left: 90%;
     cursor: pointer;
-    
 }
 
-
-.slider .product-slider img
-{
+.slider .product-slider img {
     width: 40%;
     height: 60%;
     left: 50%;
 }
 
-.slider .product-slider a
-{
+.slider .product-slider a {
     text-decoration: none;
     color: gray;
 }
 
-.slider .product-slider span
-{
+.slider .product-slider span {
     display: block;
     margin-top: 0.7vh;
 }
 
-
-.intro-slider-box
-{
+.intro-slider-box {
     width: 100vw;
     height: 65vh;
     background-color: bisque;
@@ -263,28 +229,21 @@
     z-index: 0;
     top: -35px;
     overflow: hidden;
-    
 }
 
-.intro-slider
-{
-      
+.intro-slider {
     width: 9999px;
     transition: 1s;
     align-items: center;
-    
 }
 
-.intro-slider img
-{
+.intro-slider img {
     float: left;
     width: 100vw;
     height: 65vh;
-
 }
 
-.intro-slider-box .dieu-huong
-{
+.intro-slider-box .dieu-huong {
     width: 100%;
     position: absolute;
     font-size: 24px;
@@ -293,41 +252,34 @@
     z-index: 10;
 }
 
-
-.intro-slider-box .dieu-huong i:first-child
-{
+.intro-slider-box .dieu-huong i:first-child {
     position: relative;
     left: 5%;
     cursor: pointer;
-    
 }
 
-.intro-slider-box .dieu-huong i:last-child
-{
+.intro-slider-box .dieu-huong i:last-child {
     position: relative;
     left: 90%;
     cursor: pointer;
-    
 }
 
+
 /* SALE-PRODUCT*/
-.sale-product
-{
+
+.sale-product {
     position: relative;
     background-color: rgb(204, 204, 204);
     height: 60vh;
     margin-top: 3vh;
-
 }
 
-.sale-product .sp-title
-{
-
+.sale-product .sp-title {
     position: relative;
     text-align: center;
     top: 3vh;
-
 }
+
 
 /* .sale-product .sp-title h2
 {
@@ -338,24 +290,21 @@
     
 } */
 
-.sale-product .sp-content
-{
+.sale-product .sp-content {
     position: relative;
     top: 7vh;
     width: 80%;
     height: 40vh;
     background-color: white;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
-
 }
-.sale-product .sp-content a
-{
+
+.sale-product .sp-content a {
     text-decoration: none;
 }
-.sale-product .sp-content .col1
-{
-   
+
+.sale-product .sp-content .col1 {
     height: 50%;
     float: left;
     width: 33.3333%;
@@ -365,19 +314,17 @@
     grid-template-columns: 40% 60%;
 }
 
-
-.sale-product .sp-content img
-{
+.sale-product .sp-content img {
     position: relative;
     width: 100%;
     top: 3%;
 }
-.sale-product .sp-content .sp-info
-{
+
+.sale-product .sp-content .sp-info {
     margin-top: 20%;
 }
-.sale-product .sp-content span
-{
+
+.sale-product .sp-content span {
     display: block;
     text-align: left;
     margin-left: 10%;
@@ -385,116 +332,93 @@
     color: gray;
 }
 
-.sale-product .sp-content span:last-child
-{
+.sale-product .sp-content span:last-child {
     color: red;
 }
 
 
-
-
 /* CONTACT */
-.contact
-{
+
+.contact {
     position: relative;
     margin-top: 10vh;
     height: 40vh;
-    
-
 }
 
-.contact .ct-content
-{
+.contact .ct-content {
     float: left;
     width: 25%;
-    
 }
 
-.contact .ct-content h2
-{
+.contact .ct-content h2 {
     text-align: left;
     padding-left: 3vh;
 }
 
-.contact .info li
-{
+.contact .info li {
     padding: 3vh 3vh;
-    
 }
 
-.contact .info a
-{
+.contact .info a {
     text-decoration: none;
     color: black;
 }
 
-.contact .info a:hover
-{
+.contact .info a:hover {
     color: red;
 }
 
-.contact .contact-icon
-{
+.contact .contact-icon {
     font-size: 24px;
     padding: 1vh 3vh;
-
 }
 
-.contact .contact-icon a
-{
+.contact .contact-icon a {
     padding-right: 1vh;
 }
 
-
-.contact .list ul
-{
+.contact .list ul {
     list-style: none;
 }
-.contact .list li
-{
+
+.contact .list li {
     padding: 3vh 3vh;
     float: left;
     width: 50%;
 }
 
-.contact .list a
-{
+.contact .list a {
     text-decoration: none;
     color: black;
 }
 
-.contact .list a:hover
-{
+.contact .list a:hover {
     color: red;
 }
 
-.contact .best-sale ul
-{
+.contact .best-sale ul {
     list-style: none;
 }
-.contact .best-sale li
-{
+
+.contact .best-sale li {
     float: left;
     width: 30%;
     padding: 3vh 3vh;
 }
 
-.contact .best-sale a
-{
+.contact .best-sale a {
     text-decoration: none;
 }
-.contact .best-sale img
-{
+
+.contact .best-sale img {
     width: 100%;
 }
 
-.contact .payment ul
-{
+.contact .payment ul {
     list-style: none;
 }
 
-.contact .payment li
-{
+.contact .payment li {
     position: relative;
     float: left;
     width: 40%;
@@ -504,24 +428,25 @@
     transform: translateX(-50%);
 }
 
-.contact .payment a
-{
+.contact .payment a {
     width: 30%;
-    
 }
 
-.contact .payment img
-{
+.contact .payment img {
     width: 33.333%;
 }
 
+.main {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 
-.forgot a{
-    color: #334862;
-    text-decoration: none;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    background-color: transparent;
-    box-sizing: border-box;
-    color: #353535;
+#main-center {
+    background-color: #fff0e5;
+}
+
+#intro-header {
+    background-image: url(http://mauweb.monamedia.net/vmax/wp-content/uploads/2019/05/slide-3.jpg);
+    background-position: 0% 70%;
+    background-size: cover;
 }
