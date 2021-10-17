@@ -1,0 +1,136 @@
+/*for home.html*/
+.top-header {
+    height: 3em; background-color: black; text-align: right; padding-right: 2%;
+}
+.top-header-content:link {
+    line-height: 3em; text-decoration: none; color: #777;
+}
+.top-header-content:visited {
+    line-height: 3em; text-decoration: none; color: #777;
+}
+.top-header-content:hover {
+    line-height: 3em; text-decoration: none; color: #25a8ea;
+}
+.navbar-style {
+    background-color: #f6f5f1;
+    border: none;
+    margin-bottom: 0.5%;
+}
+.navbar-container {
+    padding-top: 0.5%;
+}
+.business-info-bg {
+    background-color: #333333;
+}
+.business-info {
+    color: white; font-family: Roboto; font-weight: bold; font-size: large;
+}
+.register-bg {
+    background-color: #b8653e;
+}
+.top-product-1 {
+    margin-left: 2%;
+    width: 20%;
+}
+.top-product-2 {
+    margin-left: 2%; 
+    margin-top: 5%;
+    width: 20%;
+}
+.payment {
+    padding-left: 5%;
+    width: 20%;
+}
+.form-register-padding {
+    padding-top: 3%;
+}
+.info {
+    font-family: Roboto; 
+    font-weight: bold; 
+    font-size: large;
+}
+.slide-1 {
+    padding-bottom: 15%;
+}
+.slide-2 {
+    color: black; padding-bottom: 15%;
+}
+.slide-3 {
+    color: white; padding-bottom: 15%;
+}
+.img-slide {
+    width: 100%;
+    height: 100%;
+}
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.menu-style {
+    background-color: #f0db8b;
+    margin-bottom: 0;
+    border: none;
+}
+.container-navbar {
+    background-color: #f6f5f1;
+}
+.container-menu {
+    background-color: #f0db8b;
+}
+.list-menu {
+    padding-right: 25%;
+}
+
+/*for contact.html*/
+
+.contact-register-form {
+    padding-top: 2%;
+}
+.margin-contact-register-button {
+    margin-bottom: 3%;
+}
+.contact-bg-image {
+    background-image: url(http://mauweb.monamedia.net/vmax/wp-content/uploads/2019/05/slide-3.jpg); 
+    background-position: 0% 70%;
+    background-size: auto;
+}
+.contact-info-font {
+    font-family: Roboto;
+    font-weight: bold; 
+    font-size: large;
+}
+.contact-home-font {
+    color: white;
+}
+.home-font {
+    text-decoration: none; 
+    color: white;
+}
+
+/*for mucin.html, mayin.html, mayvanphong.html, thietbicongnghe.html, phukienvanphong.html*/
+
+.product-box-padding {
+    padding-left: 15%;
+}
+.add-to-card {
+    margin-left: 10%;
+}
+.product-image-padding {
+    padding-left: 5%;
+    width: 60%;
+}
+.product-name-font {
+    font-size: 13px;
+}
+.home-page {
+    text-decoration: none; 
+    color: #777;
+}
+.page {
+    text-decoration: none; 
+    color: black;
+}
+.danhmuc-font {
+    margin-top: 5%;
+}
