@@ -80,7 +80,7 @@ body {
 .profile .edit-info
 {
     width: 78%;
-    border-right: 1px solid rgb(206, 206, 206);
+   
 }
 .profile .edit-info > div
 {
@@ -214,6 +214,51 @@ body {
     background-color: blue;
 }
 
+
+/* FOOTER */
+.footer
+{
+    margin-top: 3vh;
+    
+}
+.jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-bottom: 30px;
+}
+
+.input-group-btn
+{
+    vertical-align: middle;
+}
+
+.input-group-btn .btn
+{
+    height: 100%;
+}
+
+.business-info-bg
+{
+    background-color:#333333;   
+}
+.business-info {
+    color: white; font-family: Roboto; font-weight: bold; font-size: large;
+}
+
+.top-product-1 {
+    margin-left: 2%;
+    width:100%;
+}
+
+
+img {
+    vertical-align: middle;
+}
+.info {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: large;
+}
 
 
 @media(max-width: 692px) {
@@ -385,3 +430,4 @@ body {
             font-size: 0.6rem;
         }
     }
+
