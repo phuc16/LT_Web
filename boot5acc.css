@@ -1,0 +1,433 @@
+body {
+    width:100vw;
+    height:100vh;
+}
+.top-header {
+    height: 3em; background-color: black; text-align: right; padding-right: 2%;
+}
+.top-header-content:link {
+    line-height: 3em; text-decoration: none; color: #777;
+}
+.top-header-content:visited {
+    line-height: 3em; text-decoration: none; color: #777;
+}
+.top-header-content:hover {
+    line-height: 3em; text-decoration: none; color: #25a8ea;
+}
+.navbar-right
+{
+    float: right!important;
+    margin-right: -15px;
+
+}
+
+
+
+/* VERTICAL NAV PILL */
+.nav-pill-container
+{
+    margin-top: 5vh;
+}
+.nav-pill-container .d-flex
+{
+    position: relative;
+    background-color: #ddd;
+    width: 80vw;
+    height: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flex-column
+{
+    height: 100%;
+    width: 30%;
+}
+.nav-pill-container .nav-link
+{
+    height: 25%;
+    width: 100%;
+    font-size: 1.2rem;
+    color: black!important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: gray!important;
+}
+
+.tab-content
+{
+    width: 70%;
+    height: 100%;
+}
+/* EDIT PROFILE TAB */
+
+.profile .content 
+{
+    display: flex;
+    padding-top: 5vh;
+    justify-content: space-evenly;
+    
+}
+
+.profile .content > div
+{
+    height: 100%;
+}
+.profile .edit-info
+{
+    width: 78%;
+   
+}
+.profile .edit-info > div
+{
+    align-items: center;
+    display: flex;
+    padding-bottom: 6vh;
+    width: 100%;
+    font-size: 1.2rem;
+    
+}
+
+.profile .edit-info > div a
+{
+    font-size: 0.8rem;
+    padding-left: 2vh;
+    color: blue;    
+}
+.profile .edit-info .label
+{
+    width: 30%;
+    text-align: right;
+    color: rgba(85,85,85,.8);
+    text-transform: capitalize;
+    overflow: hidden;
+
+}
+
+.profile .edit-info .data
+{
+    text-align: left;
+    padding-left: 2vh;
+}
+.profile .edit-info .input-data
+{
+    padding-left: 2vh;  
+    height: 200%;
+}
+
+.profile .edit-info .name input
+{
+    height: 4vh;
+    width: 30vw ;
+}
+
+.profile .edit-info .save button
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8vw;
+    height: 4vh;
+    cursor: pointer;
+    background-color: gray;
+    border: none;
+}
+
+.profile .edit-info .save button:hover
+{
+    background-color:blue;
+}
+
+
+.profile .edit-ava
+{
+    padding-left: 0vh;
+    position: relative;
+}
+.profile .edit-ava .avatar
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+
+}
+.profile .edit-ava img
+{
+    
+    width: 12vh;
+    height: 12vh;
+    border-radius: 50%;
+    border: 1px solid black;
+    
+}
+.profile .edit-ava .btn
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+}
+.profile .edit-ava button
+{
+    position: relative;
+    width: 12vh!important;
+    background-color: gray;
+    
+    border: none;
+    text-align: center;
+    
+}
+
+.profile .edit-ava button:hover
+{
+    
+    background-color: blue;
+}
+
+/* BOOTSTRAP EDIT FOR PROFILE */
+.form-check-input:checked {
+    background-color: gray!important;
+    border-color: gray!important;
+}
+
+/* BOOTSTRAP EDIT FOR PASSWORD */  
+.password .form-control {
+    width: 90%!important;
+    margin-bottom: 1rem;
+}  
+
+.password button
+{
+    background-color: gray;
+    border: none;
+}
+
+.password button:hover
+{
+    background-color: blue;
+}
+
+
+/* FOOTER */
+.footer
+{
+    margin-top: 3vh;
+    
+}
+.jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-bottom: 30px;
+}
+
+.input-group-btn
+{
+    vertical-align: middle;
+}
+
+.input-group-btn .btn
+{
+    height: 100%;
+}
+
+.business-info-bg
+{
+    background-color:#333333;   
+}
+.business-info {
+    color: white; font-family: Roboto; font-weight: bold; font-size: large;
+}
+
+.top-product-1 {
+    margin-left: 2%;
+    width:100%;
+}
+
+
+img {
+    vertical-align: middle;
+}
+.info {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+@media(max-width: 692px) {
+
+    .profile .edit-info .label
+    {
+        text-align: left;
+    }
+    .profile .edit-info > div {
+        text-align: left;
+        font-size: 0.8rem;
+    }
+
+    .profile .edit-info > div a {
+        font-size: 0.6rem;
+        
+    }
+}
+
+@media(max-width: 375px) 
+{
+    .nav-pill-container .d-flex
+        {
+            width: 100vw;
+        }
+
+        .flex-column
+        {
+            width: 20%;
+        }
+
+        .nav-pill-container .nav-link
+        {
+            font-size: 0.6rem;
+        }
+
+        .profile .edit-info .label
+        {
+            text-align: left;
+        }
+        .profile .edit-info > div {
+            font-size: 0.4rem;
+            margin-left: 0px;
+            justify-content: unset;
+        }
+        .profile .edit-info .name input
+        {
+            width:100px;
+            height: 20px;
+            margin-left: -45px;
+        }
+
+        .profile .edit-info .name input::placeholder
+        {
+            display: none;
+        }
+        .profile .edit-info .data
+        {
+            padding-left: 5px;
+        }
+        .profile .mail .data
+        {
+            text-align: left;
+        }
+        .profile .edit-info > div a {
+            display: block;
+            font-size: 0.3rem;
+            
+        }
+
+        .profile .edit-info .save button
+        {
+            width: 100px;
+        }
+
+        .profile .edit-ava img
+        {
+            width: 50px;
+            height: 50px;
+        }
+
+
+
+        .profile .edit-ava .btn
+        {
+            height: 30px;
+        }
+
+        .profile .edit-ava button
+        {
+            font-size: 0.6rem;
+        }
+}
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) 
+    { 
+        .nav-pill-container .d-flex
+        {
+            width: 100vw;
+        }
+
+        .flex-column
+        {
+            width: 20%;
+        }
+
+        .nav-pill-container .nav-link
+        {
+            font-size: 0.6rem;
+        }
+
+        .profile .edit-info .label
+        {
+            text-align: left;
+        }
+        .profile .edit-info > div {
+            font-size: 0.4rem;
+            margin-left: 0px;
+            justify-content: unset;
+        }
+        .profile .edit-info .name input
+        {
+            width:100px;
+            height: 20px;
+            margin-left: -45px;
+        }
+
+        .profile .edit-info .name input::placeholder
+        {
+            display: none;
+        }
+        .profile .edit-info .data
+        {
+            padding-left: 5px;
+        }
+        .profile .mail .data
+        {
+            text-align: left;
+        }
+        .profile .edit-info > div a {
+            display: block;
+            font-size: 0.3rem;
+            
+        }
+
+        .profile .edit-info .save button
+        {
+            width: 100px;
+        }
+
+        .profile .edit-ava img
+        {
+            width: 50px;
+            height: 50px;
+        }
+
+
+
+        .profile .edit-ava .btn
+        {
+            height: 30px;
+        }
+
+        .profile .edit-ava button
+        {
+            font-size: 0.6rem;
+        }
+    }
+
