@@ -37,7 +37,6 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">STT</th>
                                             <th scope="col">Tên người dùng</th>
                                             <th scope="col">Mật khẩu</th>
                                             <th scope="col">Họ và Tên</th>
@@ -45,19 +44,20 @@
                                             <th scope="col">Ngày sinh</th>
                                             <th scope="col">Số điện thoại</th>
                                             <th scope="col">Mail</th>
+                                            <th scope="col">Avatar</th>
                                             <th scope="col"></th>
                                         </tr>
                                       </thead>
                                       <tbody>
                                         <tr>
-                                            <td>1</td>
                                             <td>kogleo</td>
                                             <td>12345678</td>
                                             <td>Nguyễn Văn Leo</td>
                                             <td>M</td>
                                             <td>18/08/2001</td>
                                             <td>0123456789</td>
-                                            <td>leonguyen@gmai.com</td>
+                                            <td>leonguyen@gmail.com</td>
+                                            <td>link</td>
                                             <td>
                                                 <a href="#" class="link-primary">Chỉnh sửa</a> |
                                                 <a href="#" class="link-primary">Xóa</a>
@@ -65,28 +65,28 @@
                                           
                                         </tr>
                                         <tr>
-                                            <td>2</td>
                                             <td>remsokawai</td>
                                             <td>phuccaothu</td>
                                             <td>Trương Hoàng Phúc</td>
                                             <td>M</td>
                                             <td>12/06/2001</td>
                                             <td>0981273462</td>
-                                            <td>phuctruong@gmai.com</td>
+                                            <td>phuctruong@gmail.com</td>
+                                            <td>link</td>
                                             <td>
                                                 <a href="#" class="link-primary">Chỉnh sửa</a> |
                                                 <a href="#" class="link-primary">Xóa</a>
                                             </td>  
                                         </tr>
                                         <tr>
-                                            <td>3</td>
                                             <td>inuyasha</td>
                                             <td>banyeumatcho</td>
                                             <td>Trần Cẩu</td>
                                             <td>F</td>
                                             <td>02/06/1998</td>
                                             <td>0989873462</td>
-                                            <td>inuyasha@gmai.com</td>
+                                            <td>inuyasha@gmail.com</td>
+                                            <td>link</td>
                                             <td>
                                                 <a href="#" class="link-primary">Chỉnh sửa</a> |
                                                 <a href="#" class="link-primary">Xóa</a>
@@ -99,24 +99,78 @@
                             
                         </div>
                     </div>
-                    <div class="tab-pane fade " id="v-pills-comment" role="tabpanel" aria-labelledby="v-pills-comment-tab">3</div>
+                    <div class="tab-pane fade " id="v-pills-comment" role="tabpanel" aria-labelledby="v-pills-comment-tab">
+                        <div class="table-container container">
+                            <h6 >Danh sách bình luận</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Thời gian</th>
+                                            <th scope="col">Người viết</th>
+                                            <th scope="col">Nội dung</th>
+                                            <th scope="col">Bài viết</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>10:00:00</td>
+                                            <td>Nguyễn Văn A</td>
+                                            <td>ABC...</td>
+                                            <td>Bài viết 1</td>
+                                            <td>
+                                                <a href="#" class="link-primary">Duyệt</a> |
+                                                <a href="#" class="link-primary">Xóa</a>
+                                            </td>  
+                                          
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>11:00:00</td>
+                                            <td>Nguyễn Văn B</td>
+                                            <td>XYZ...</td>
+                                            <td>Bài viết 2</td>
+                                            <td>
+                                                <a href="#" class="link-primary">Duyệt</a> |
+                                                <a href="#" class="link-primary">Xóa</a>
+                                            </td>  
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>12:00:00</td>
+                                            <td>Nguyễn Văn C</td>
+                                            <td>IJK...</td>
+                                            <td>Bài viết 3</td>
+                                            <td>
+                                                <a href="#" class="link-primary">Duyệt</a> |
+                                                <a href="#" class="link-primary">Xóa</a>
+                                            </td>    
+                                        </tr>
+                                      </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab-pane fade" id="v-pills-info" role="tabpanel" aria-labelledby="v-pills-info-tab">
-                        <div class="infor-tab">
-                            <h3>Thông tin liên hệ</h3>
-                            <div class="infor-tab-box">
+                        <div class="container">
+                            <h3 class="text-center">Thông tin liên hệ</h3>
+                            <div class="infor-tab-box px-5">
                                 <span class="details">Địa chỉ: </span>
                                 <input type="text" placeholder="Nhập địa chỉ" required>
                             </div>
-                            <div class="infor-tab-box">
+                            <div class="infor-tab-box px-5">
                                 <span class="details">Số điện thoại: </span>
                                 <input type="text" placeholder="Nhập số điện thoại" required>
                             </div>
-                            <div class="infor-tab-box">
+                            <div class="infor-tab-box px-5">
                                 <span class="details">Mail: </span>
                                 <input type="text" placeholder="Nhập email" required>
                             </div>
                             <div class="button-sub">
-                                <input type="submit" value="Submit">
+                                <input type="submit" value="Chỉnh sửa">
                             </div>
                         </div>
                     </div>
@@ -127,11 +181,13 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">STT</th>
+                                            <th scope="col">ID</th>
                                             <th scope="col">Tên sản phẩm</th>
                                             <th scope="col">Số lượng</th>
-                                            <th scope="col">Miêu tả</th>
+                                            <th scope="col">Mô tả</th>
                                             <th scope="col">Giá</th>
+                                            <th scope="col">Loại</th>
+                                            <th scope="col">Hình ảnh</th>
                                             <th scope="col"></th>
                                         </tr>
                                       </thead>
@@ -142,6 +198,8 @@
                                             <td><input type="number" class="spinner-inc" value="1"></td>
                                             <td>Kiểu dáng đơn giản, gọn gàng</td>
                                             <td><input type="number" class="spinner-inc" value="23000"></td>
+                                            <td>Máy in</td>
+                                            <td>link</td>
                                             <td>
                                                 <a href="#" class="link-primary">Chỉnh sửa</a> |
                                                 <a href="#" class="link-primary">Xóa</a>
@@ -154,8 +212,116 @@
                             <a href="#" class="link-primary"><button type="button" class="btn btn-primary">Thêm</button></a>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-new" role="tabpanel" aria-labelledby="v-pills-new-tab">6</div>
-                    <div class="tab-pane fade" id="v-pills-material" role="tabpanel" aria-labelledby="v-pills-material-tab">End</div>
+                    <div class="tab-pane fade" id="v-pills-new" role="tabpanel" aria-labelledby="v-pills-new-tab">
+                        <div class="table-container container">
+                            <h6 >Danh sách bài viết</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Tiêu đề</th>
+                                            <th scope="col">Từ khóa</th>
+                                            <th scope="col">Mô tả</th>
+                                            <th scope="col">Nội dung</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Bài viết 1</td>
+                                            <td>ABC...</td>
+                                            <td>ABC...</td>
+                                            <td>link</td>
+                                            <td>
+                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
+                                                <a href="#" class="link-primary">Xóa</a>
+                                            </td>  
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Bài viết 2</td>
+                                            <td>XYZ...</td>
+                                            <td>XYZ...</td>
+                                            <td>link</td>
+                                            <td>
+                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
+                                                <a href="#" class="link-primary">Xóa</a>
+                                            </td>  
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Bài viết 3</td>
+                                            <td>IJK...</td>
+                                            <td>IJK...</td>
+                                            <td>link</td>
+                                            <td>
+                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
+                                                <a href="#" class="link-primary">Xóa</a>
+                                            </td>    
+                                        </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                            <a href="#" class="link-primary"><button type="button" class="btn btn-primary">Thêm</button></a>
+                            
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-material" role="tabpanel" aria-labelledby="v-pills-material-tab">
+                        <div class="table-container container">
+                            <h6 >Danh sách tài nguyên</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">STT</th>
+                                            <th scope="col">Tên</th>
+                                            <th scope="col">Loại tài nguyên</th>
+                                            <th scope="col">Nội dung</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Ảnh 1</td>
+                                            <td>Hình ảnh</td>
+                                            <td>ABC...</td>
+                                            <td>
+                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
+                                                <a href="#" class="link-primary">Xóa</a>
+                                            </td>  
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Ảnh 2</td>
+                                            <td>Hình ảnh</td>
+                                            <td>XYZ...</td>
+                                            <td>
+                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
+                                                <a href="#" class="link-primary">Xóa</a>
+                                            </td>  
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Bài viết 1</td>
+                                            <td>Bài viết</td>
+                                            <td>IJK...</td>
+                                            <td>
+                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
+                                                <a href="#" class="link-primary">Xóa</a>
+                                            </td>    
+                                        </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                            <a href="#" class="link-primary"><button type="button" class="btn btn-primary">Thêm</button></a>
+                            
+                        </div>
+                    </div>
                 </div>
               </div>
         </div>

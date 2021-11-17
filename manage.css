@@ -36,10 +36,6 @@ body {
 
 
 /* EDIT sidebar */
-.sidebar-container
-{
-    
-}
 .sidebar-container .d-flex .nav button
 {
     height: calc(100vh/7);
