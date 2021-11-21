@@ -49,7 +49,7 @@
                     $result = $signup->signup($username, $name, $email, $password, $dob, $gender, $phone);
                     if ($result) {
                         $_SESSION["username"] = $username;
-                        header("Location: http://localhost/LT_Web/home");
+                        echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/home">';
                     }
                 }
             }

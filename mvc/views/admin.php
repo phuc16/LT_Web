@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://mauweb.monamedia.net/vmax/wp-content/uploads/2019/05/Mona-designstyle-colors-m.png">
     <title>Mona company</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -12,7 +13,7 @@
 <body>
     <div class="main">
         <div class="top-header">
-            <a href="#" class="top-header-content"><i class="bi bi-lock"></i> Đăng nhập</a>
+            <a href="./AdminLogin/LogOut" class="top-header-content"><i class="bi bi-lock"></i> Đăng xuất</a>
         </div>
     
         <div class="sidebar-container">
@@ -168,7 +169,7 @@
                                 <input type="text" id="mail" name="mail" placeholder="Nhập email" value="<?php echo $row['mail']?>" required>
                             </div>
                             <div class="button-sub">
-                                <button type="submit" name="contactsEdit">Chỉnh sửa</button>
+                                <button type="submit" name="contactsEdit" class="btn btn-primary">Chỉnh sửa</button>
                             </div>
                             <?php 
                                 }
@@ -183,25 +184,23 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
-                                            <th scope="col">Tên sản phẩm</th>
-                                            <th scope="col">Số lượng</th>
-                                            <th scope="col">Mô tả</th>
-                                            <th scope="col">Giá</th>
-                                            <th scope="col">Loại</th>
-                                            <th scope="col">Hình ảnh</th>
-                                            <th scope="col"></th>
+                                            <th scope="col" style="width: 15%">Tên sản phẩm</th>
+                                            <th scope="col" style="width: 10%">Số lượng</th>
+                                            <th scope="col" style="width: 35%">Mô tả</th>
+                                            <th scope="col" style="width: 5%">Giá</th>
+                                            <th scope="col" style="width: 10%">Loại</th>
+                                            <th scope="col" style="width: 15%"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php while($row = mysqli_fetch_array($data['Products'])) { ?>
                                         <tr>
-                                            <td><?php echo $row['id']?></td>
-                                            <td><?php echo $row['name']?></td>
-                                            <td><?php echo number_format($row['quantity'])?></td>
-                                            <td><?php echo $row['description']?></td>
-                                            <td><?php echo number_format($row['price'])?></td>
-                                            <td><?php echo $row['type']?></td>
-                                            <td><?php echo $row['image']?></td>
+                                            <td scope="col"><?php echo $row['id']?></td>
+                                            <td scope="col"><?php echo $row['name']?></td>
+                                            <td scope="col"><?php echo number_format($row['quantity'])?></td>
+                                            <td scope="col"><?php echo $row['description']?></td>
+                                            <td scope="col"><?php echo number_format($row['price'])?></td>
+                                            <td scope="col"><?php echo $row['type']?></td>
                                             <td class="d-flex">
                                                 <form action="./updateProduct" method="POST">
                                                     <input type="text" value="<?php echo $row['id']; ?>" name="id" hidden>
@@ -242,11 +241,11 @@
                                         <tbody>
                                         <?php while($row = mysqli_fetch_array($data['Posts'])) { ?>
                                             <tr>
-                                                <td><?php echo $row['id']?></td>
-                                                <td><?php echo $row['title']?></td>
-                                                <td><?php echo $row['SEOkey']?></td>
-                                                <td><?php echo $row['description']?></td>
-                                                <td><?php echo $row['content']?></td>
+                                                <td scope="col"><?php echo $row['id']?></td>
+                                                <td scope="col"><?php echo $row['title']?></td>
+                                                <td scope="col"><?php echo $row['SEOkey']?></td>
+                                                <td scope="col"><?php echo $row['description']?></td>
+                                                <td scope="col"><?php echo $row['content']?></td>
                                                 <td class="d-flex">
                                                     <form action="./updatePost" method="POST">
                                                         <input type="text" value="<?php echo $row['id']; ?>" name="id" hidden>

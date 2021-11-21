@@ -37,7 +37,7 @@
                 <input type="text" id="image" name="image" placeholder="Nhập link hình ảnh" value="" required>
             </div>
             <div class="button-sub">
-                <button type="submit" name="postUpdate">Thêm</button>
+                <button type="submit" name="postUpdate" class="btn btn-primary">Thêm</button>
             </div>
         </form>
 
