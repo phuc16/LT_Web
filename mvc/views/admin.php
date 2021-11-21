@@ -154,24 +154,28 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-info" role="tabpanel" aria-labelledby="v-pills-info-tab">
-                        <div class="container">
+                        <form class="container" method="post">
                             <h6 class="text-center" style="margin-top: 2%;">Thông tin liên hệ</h6>
+                            <?php while($row = mysqli_fetch_array($data['Contacts'])) { ?>
                             <div class="infor-tab-box px-5">
                                 <span class="details">Địa chỉ: </span>
-                                <input type="text" placeholder="Nhập địa chỉ" required>
+                                <input type="text" id="address" name="address" placeholder="Nhập địa chỉ" value="<?php echo $row['address']?>" required>
                             </div>
                             <div class="infor-tab-box px-5">
                                 <span class="details">Số điện thoại: </span>
-                                <input type="text" placeholder="Nhập số điện thoại" required>
+                                <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại" value="<?php echo $row['phone']?>" required>
                             </div>
                             <div class="infor-tab-box px-5">
-                                <span class="details">Mail: </span>
-                                <input type="text" placeholder="Nhập email" required>
+                                <span class="details">Mail:</span>
+                                <input type="text" id="mail" name="mail" placeholder="Nhập email" value="<?php echo $row['mail']?>" required>
                             </div>
                             <div class="button-sub">
-                                <input type="submit" value="Chỉnh sửa">
+                                <button type="submit" name="contactsEdit">Chỉnh sửa</button>
                             </div>
-                        </div>
+                            <?php 
+                                }
+                            ?>
+                        </form>
                     </div>
                     <div class="tab-pane fade" id="v-pills-product" role="tabpanel" aria-labelledby="v-pills-product-tab">
                         <div class="table-container list-product">
@@ -189,26 +193,37 @@
                                             <th scope="col">Hình ảnh</th>
                                             <th scope="col"></th>
                                         </tr>
-                                      </thead>
-                                      <tbody>
+                                    </thead>
+                                    <tbody>
+                                        <?php while($row = mysqli_fetch_array($data['Products'])) { ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Máy In Lazer Trắng Đen Đa Năng HP </td>
-                                            <td><input type="number" class="spinner-inc" value="1"></td>
-                                            <td>Kiểu dáng đơn giản, gọn gàng</td>
-                                            <td><input type="number" class="spinner-inc" value="23000"></td>
-                                            <td>Máy in</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
+                                            <td><?php echo $row['id']?></td>
+                                            <td><?php echo $row['name']?></td>
+                                            <td><?php echo number_format($row['quantity'])?></td>
+                                            <td><?php echo $row['description']?></td>
+                                            <td><?php echo number_format($row['price'])?></td>
+                                            <td><?php echo $row['type']?></td>
+                                            <td><?php echo $row['image']?></td>
+                                            <td class="d-flex">
+                                                <form action="./updateProduct" method="POST">
+                                                    <input type="text" value="<?php echo $row['id']; ?>" name="id" hidden>
+                                                    <button type="submit" class="btn btn-outline-info btn-sm">Chỉnh sửa</button>
+                                                </form>
+                                                <form method="POST">
+                                                    <input type="text" value="<?php echo $row['id']; ?>" name ="id" hidden>
+                                                    <button name="productDelete" type="submit" class="btn btn-outline-danger btn-sm">Xóa</button>
+                                                </form>
                                             </td>  
-                                          
                                         </tr>
-                                      </tbody>
+                                        <?php 
+                                            }
+                                        ?>
+                                    </tbody>
                                 </table>
                             </div>
-                            <button type="button" class="btn btn-primary">Thêm</button>
+                            <form action="./addProduct" method="POST">
+                                <button type="submit" class="btn btn-primary">Thêm</button>
+                            </form>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-new" role="tabpanel" aria-labelledby="v-pills-new-tab">
@@ -227,45 +242,33 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Bài viết 1</td>
-                                            <td>ABC...</td>
-                                            <td>ABC...</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Bài viết 2</td>
-                                            <td>XYZ...</td>
-                                            <td>XYZ...</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Bài viết 3</td>
-                                            <td>IJK...</td>
-                                            <td>IJK...</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>    
-                                        </tr>
+                                        <?php while($row = mysqli_fetch_array($data['Posts'])) { ?>
+                                            <tr>
+                                                <td><?php echo $row['id']?></td>
+                                                <td><?php echo $row['title']?></td>
+                                                <td><?php echo $row['SEOkey']?></td>
+                                                <td><?php echo $row['description']?></td>
+                                                <td><?php echo $row['content']?></td>
+                                                <td class="d-flex">
+                                                    <form action="./updatePost" method="POST">
+                                                        <input type="text" value="<?php echo $row['id']; ?>" name="id" hidden>
+                                                        <button type="submit" class="btn btn-outline-info btn-sm">Chỉnh sửa</button>
+                                                    </form>
+                                                    <form method="POST">
+                                                        <input type="text" value="<?php echo $row['id']; ?>" name ="id" hidden>
+                                                        <button name="postDelete" type="submit" class="btn btn-outline-danger btn-sm">Xóa</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        <?php 
+                                            }
+                                        ?>
                                         </tbody>
                                 </table>
                             </div>
-                            <button type="button" class="btn btn-primary">Thêm</button>
-                            
+                            <form action="./addPost" method="POST">
+                                <button type="submit" class="btn btn-primary">Thêm</button>
+                            </form>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-material" role="tabpanel" aria-labelledby="v-pills-material-tab">
