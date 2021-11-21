@@ -7,6 +7,7 @@
                 $username = $_POST["username"];
                 $password = $_POST["password"];
                 $result = $login->verifyLogin($username, $password);
+                print_r($result);
                 if ($result) {
                     $_SESSION["username"] = $username;
                     if (isset($_POST["remember"])) {
@@ -19,6 +20,7 @@
         }
         function Logout() {
             unset($_SESSION["username"]);
+            session_destroy();
             header("Location: http://localhost/LT_Web/home");
         }
     }

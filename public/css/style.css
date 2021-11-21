@@ -10,6 +10,9 @@
 .top-header-content:hover {
     line-height: 3em; text-decoration: none; color: #25a8ea;
 }
+.navbar {
+    padding-bottom: 0px;
+}
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {

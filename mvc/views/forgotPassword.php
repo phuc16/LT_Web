@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="http://mauweb.monamedia.net/vmax/wp-content/uploads/2019/05/Mona-designstyle-colors-m.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -20,13 +21,13 @@
                     <div class="text-box mt-5 mb-5">
                         <h2>Quên mật khẩu</h2>
                         <p>Vui lòng nhập tên đăng nhập hoặc địa chỉ email. Bạn sẽ nhận được một liên kết tạo mật khẩu mới qua email.</p>
-                        <form>
+                        <form method="post">
                             <div class="mb-4 form-floating">
-                                <input type="text" class="form-control" id="username" required>
+                                <input type="email" class="form-control" id="username" required>
                                 <label for="username">Tên đăng nhập hoặc email</label>
                             </div>
                             <div class="mb-3 d-grid gap-2">
-                                <button class="btn btn-outline-danger" type="submit">Đặt lại mật khẩu</button>
+                                <button class="btn btn-outline-danger" type="submit" name="resetPassword">Đặt lại mật khẩu</button>
                             </div>
                             <div class="mb-3">
                                 <a class="link-dark" href="login">Đăng nhập</a>

@@ -12,8 +12,6 @@
 <body>
     <div class="main">
         <div class="top-header">
-            <a href="#" class="top-header-content"><i class="bi bi-person-fill"></i>Tài khoản của tôi</a>
-            &nbsp; &nbsp; &nbsp;
             <a href="#" class="top-header-content"><i class="bi bi-lock"></i> Đăng nhập</a>
         </div>
     
