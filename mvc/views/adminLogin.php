@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Password:</label><br>
-                                <input type="text" name="password" name="password" class="form-control">
+                                <input type="password" name="password" name="password" class="form-control">
                             </div>
                             <div class="form-group text-center">
                                 <input type="submit" name="login" class="btn btn-info btn-md" value="Login">
