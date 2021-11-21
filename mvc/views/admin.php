@@ -48,53 +48,34 @@
                                         </tr>
                                       </thead>
                                       <tbody>
+                                        <?php while($row = mysqli_fetch_array($data["getMember"])){?>
                                         <tr>
-                                            <td>kogleo</td>
-                                            <td>12345678</td>
-                                            <td>Nguyễn Văn Leo</td>
-                                            <td>M</td>
-                                            <td>18/08/2001</td>
-                                            <td>0123456789</td>
-                                            <td>leonguyen@gmail.com</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
+                                            <td><?php echo $row['username']?></td>
+                                            <td><?php echo $row['password']?></td>
+                                            <td><?php echo $row['name']?></td>
+                                            <td><?php echo $row['gender']?></td>
+                                            <td><?php echo $row['dob']?></td>
+                                            <td><?php echo $row['phone']?></td>
+                                            <td><?php echo $row['email']?></td>
+                                            <td><?php echo $row['avatar']?></td>
+                                            <td style="width: 10vw">
+                                                <button type="submit" class="btn btn-outline-info btn-sm">
+                                                    <a href="./updateMember"  class="link-primary" style="text-decoration: none" onClick="getUser(this)" id="<?php echo $row['username']; ?>">Chỉnh sửa</a>
+                                                </button>
+                                                <form method="post" style="display: inline-block">
+                                                        <input type="text" value="<?php echo $row['username']; ?>" name ="username" hidden>
+                                                        <button name="deleteMember" type="submit" class="btn btn-outline-danger btn-sm">Xóa</button>
+                                                </form>
                                             </td>  
                                           
                                         </tr>
-                                        <tr>
-                                            <td>remsokawai</td>
-                                            <td>phuccaothu</td>
-                                            <td>Trương Hoàng Phúc</td>
-                                            <td>M</td>
-                                            <td>12/06/2001</td>
-                                            <td>0981273462</td>
-                                            <td>phuctruong@gmail.com</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                        </tr>
-                                        <tr>
-                                            <td>inuyasha</td>
-                                            <td>banyeumatcho</td>
-                                            <td>Trần Cẩu</td>
-                                            <td>F</td>
-                                            <td>02/06/1998</td>
-                                            <td>0989873462</td>
-                                            <td>inuyasha@gmail.com</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>    
-                                        </tr>
+                                       <?php }?>
                                       </tbody>
                                 </table>
                             </div>
-                            <button type="button" class="btn btn-primary">Thêm</button>
+                            
+                                <button type="button" class="btn btn-outline-info btn-sm"> <a href="./addMember"  class="link-primary" style="text-decoration: none">Thêm</a> </button>
+                           
                             
                         </div>
                     </div>
@@ -106,50 +87,39 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
-                                            <th scope="col">Thời gian</th>
                                             <th scope="col">Người viết</th>
-                                            <th scope="col">Nội dung</th>
                                             <th scope="col">Bài viết</th>
+                                            <th scope="col">Nội dung</th>
+                                            <th scope="col">Thời gian</th>
+                                            <th scope="col">Trạng thái</th>
                                             <th scope="col"></th>
                                         </tr>
                                       </thead>
                                       <tbody>
+                                        <?php while($row = mysqli_fetch_array($data["getComment"])){?>
                                         <tr>
-                                            <td>1</td>
-                                            <td>10:00:00</td>
-                                            <td>Nguyễn Văn A</td>
-                                            <td>ABC...</td>
-                                            <td>Bài viết 1</td>
+                                            <td><?php echo $row['id']?></td>
+                                            <td><?php echo $row['username']?></td>
+                                            <td><?php echo $row['postId']?></td>
+                                            <td><?php echo $row['content']?></td>
+                                            <td><?php echo $row['time']?></td>
+                                            <td><?php 
+                                                    if ( $row['status'] != 0){echo 'Đã duyệt';} else {echo 'Chưa duyệt';};
+                                                ?>
+                                            </td>
                                             <td>
-                                                <a href="#" class="link-primary">Duyệt</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
+                                            <form method="post">
+                                                <input type="text" value="<?php echo $row['id']; ?>" name ="id" hidden>
+                                                <button type="submit" name='acceptComment' class="btn btn-outline-info btn-sm"> Duyệt </button> 
+                                                <button type="submit" name='deleteComment' class="btn btn-outline-danger btn-sm"> Xóa </button> 
+                                            </form> 
                                             </td>  
-                                          
+                                        
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>11:00:00</td>
-                                            <td>Nguyễn Văn B</td>
-                                            <td>XYZ...</td>
-                                            <td>Bài viết 2</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Duyệt</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>12:00:00</td>
-                                            <td>Nguyễn Văn C</td>
-                                            <td>IJK...</td>
-                                            <td>Bài viết 3</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Duyệt</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>    
-                                        </tr>
+                                        <?php }?>
                                       </tbody>
                                 </table>
+                                
                             </div>
                         </div>
                     </div>
@@ -276,48 +246,37 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">STT</th>
-                                            <th scope="col">Tên</th>
                                             <th scope="col">Loại tài nguyên</th>
+                                            <th scope="col">Tên</th>
                                             <th scope="col">Nội dung</th>
                                             <th scope="col"></th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Ảnh 1</td>
-                                            <td>Hình ảnh</td>
-                                            <td>ABC...</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
+                                            <?php while($row = mysqli_fetch_array($data["getResource"])){?>
+                                            <tr>
+                                                <td><?php echo $row['id']?></td>
+                                                <td><?php echo $row['type']?></td>
+                                                <td><?php echo $row['name']?></td>
+                                                <td><?php echo $row['content']?></td>
+                                               
+                                                <td style="width: 10vw">
+                                                    <button type="submit" class="btn btn-outline-info btn-sm">
+                                                        <a href="./updateResource"  class="link-primary" style="text-decoration: none" onClick="getID(this)" id="<?php echo $row['id']; ?>">Chỉnh sửa</a>
+                                                    </button>
+                                                    <form method="post" style="display: inline-block">
+                                                            <input type="text" value="<?php echo $row['id']; ?>" name ="id" hidden>
+                                                            <button name="deleteResource" type="submit" class="btn btn-outline-danger btn-sm">Xóa</button>
+                                                    </form>
+                                                </td>  
                                             
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Ảnh 2</td>
-                                            <td>Hình ảnh</td>
-                                            <td>XYZ...</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Bài viết 1</td>
-                                            <td>Bài viết</td>
-                                            <td>IJK...</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>    
-                                        </tr>
+                                            </tr>
+                                            <?php }?>
                                         </tbody>
                                 </table>
+
                             </div>
-                            <button type="button" class="btn btn-primary">Thêm</button>
+                            <button type="button" class="btn btn-outline-info btn-sm"> <a href="./addResource"  class="link-primary" style="text-decoration: none">Thêm</a> </button>
                             
                         </div>
                     </div>
@@ -326,5 +285,22 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        
+        function getUser(ele)
+        {
+            var globalID;
+            globalID = ele.id;
+            
+            document.cookie="cname="+globalID;
+        }
+        function getID(ele)
+        {
+            var globalID;
+            globalID = ele.id;
+            
+            document.cookie="cname="+globalID;
+        }
+    </script>                                       
 </body>
 </html>

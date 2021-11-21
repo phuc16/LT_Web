@@ -27,7 +27,7 @@
             $this->params = $arr ? array_values($arr) : [];
 
             call_user_func_array([$this->controller, $this->action], $this->params);
-        }
+        }   
 
         function urlProcess() {
             if (isset($_GET["url"])) {
