@@ -71,8 +71,8 @@
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center experience"><span>Thay đổi mật khẩu</span></div><br>
                     <div class="col-md-12"><label class="labels">Mật khẩu cũ</label><input type="text" class="form-control" placeholder="Mật khẩu cũ" value="<?php echo $row["password"]; ?>" disabled></div> <br>
-                    <div class="col-md-12"><label class="labels">Nhập mật khẩu mới</label><input type="text" class="form-control" placeholder="Mật khẩu mới" value="" name="password"></div> <br>
-                    <div class="col-md-12"><label class="labels">Nhập lại mật khẩu mới</label><input type="text" class="form-control" placeholder="Nhập lại mật khẩu mới" value="" name="rePassword"></div>
+                    <div class="col-md-12"><label class="labels">Nhập mật khẩu mới</label><input type="password" class="form-control" placeholder="Mật khẩu mới" value="" name="password"></div> <br>
+                    <div class="col-md-12"><label class="labels">Nhập lại mật khẩu mới</label><input type="password" class="form-control" placeholder="Nhập lại mật khẩu mới" value="" name="rePassword"></div>
                     <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit" name="changePassword">Đổi mật khẩu</button></div>
                 </div>
             </div>

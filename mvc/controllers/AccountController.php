@@ -14,6 +14,7 @@
                     $phone = $_POST["phone"];
                     $email = $_POST["email"];
                     $account->updateInfo($name, $dob, $gender, $phone, $email);
+                    echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/Account">';
                 }
                 if (isset($_POST["changePassword"])) {
                     $password = $_POST["password"];
@@ -23,6 +24,7 @@
                             $account->changePassword($password);
                         }
                     }
+                    echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/Account">';
                 }
                 if (isset($_POST["changeAvatar"])) {
                     $file = $_FILES["avatar"];
@@ -32,6 +34,7 @@
                     $path = "./uploads/" . $_SESSION["username"] . "/".  $file["name"];
                     move_uploaded_file($file["tmp_name"], $path);
                     $account->changeAvatar($path);
+                    echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/Account">';
                 }
             } else {
                 header("Location: http://localhost/LT_Web/Login");
