@@ -1,9 +1,15 @@
 <?php
     class UpdatePostController extends Controller {
         function Show() {     
-            $updatePost = $this->model('UpdatePostModel');       
+            $updatePost = $this->model('UpdatePostModel');   
+            $postId = "";
+            if (isset($_POST['id'])) {
+                $postId = $_POST['id'];
+            } else {
+                echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
+            } 
             $this->view("updatePost", [
-                'PostId'=>$updatePost->getPostId($_POST['id'])
+                'PostId'=>$updatePost->getPostId($postId)
             ]);
             
             if(isset($_POST['postUpdate'])) {

@@ -19,7 +19,6 @@
         }
         function Logout() {
             unset($_SESSION["username"]);
-            session_destroy();
             header("Location: http://localhost/LT_Web/home");
         }
     }

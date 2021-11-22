@@ -6,7 +6,10 @@
                 $this->view("admin", [
                     'Contacts'=>$admin->getContacts(),
                     'Products'=>$admin->getProducts(),
-                    'Posts'=>$admin->getPosts()
+                    'Posts'=>$admin->getPosts(),
+                    "getMember" => $admin->getMember(),
+                    "getComment" => $admin->getComment(),
+                    "getResource" => $admin->getResource()
                 ]);
                 if (isset($_POST['contactsEdit'])) {
                     $address = $_POST['address'];
@@ -28,6 +31,34 @@
                 if (isset($_POST['productDelete'])){
                     $id = $_POST['id'];
                     $admin->deleteProduct($id);
+                    echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
+                }
+
+                // DELETE MEMBER
+                if (isset($_POST['deleteMember'])){
+                    $username = $_POST['username'];
+                    $admin->deleteMember($username);
+                    echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
+                
+                };
+                // ACCEPT COMMENT
+                if (isset($_POST['acceptComment'])){
+                    $id = $_POST['id'];
+                    $admin->acceptComment($id);
+                    echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
+                
+                }
+                // DELETE COMMENT
+                if (isset($_POST['deleteComment'])){
+                    $id = $_POST['id'];
+                    $admin->deleteComment($id);
+                    echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
+                
+                }
+                // DELETE RESOURCE
+                if (isset($_POST['deleteResource'])){
+                    $id = $_POST['id'];
+                    $admin->deleteResource($id);
                     echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
                 }
             } else {

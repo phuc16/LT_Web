@@ -14,27 +14,27 @@
             <h6 class="text-center" style="margin-top: 2%;">Thông tin sản phẩm</h6>            
             <div class="infor-tab-box px-5">
                 <span class="details">Tên sản phẩm: </span>
-                <input type="text" id="name" name="name" placeholder="Nhập tên sản phẩm" value="" required>
+                <input type="text" id="name" name="name" placeholder="Nhập tên sản phẩm" value="" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Số lượng:</span>
-                <input type="text" id="quantity" name="quantity" placeholder="Nhập số lượng" value="" required>
+                <input type="text" id="quantity" name="quantity" placeholder="Nhập số lượng" value="" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Mô tả:</span>
-                <input type="text" id="description" name="description" placeholder="Nhập mô tả" value="" required>
+                <input type="text" id="description" name="description" placeholder="Nhập mô tả" value="" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Giá:</span>
-                <input type="text" id="price" name="price" placeholder="Nhập giá" value="" required>
+                <input type="text" id="price" name="price" placeholder="Nhập giá" value="" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Loại:</span>
-                <input type="text" id="type" name="type" placeholder="Nhập loại" value="" required>
+                <input type="text" id="type" name="type" placeholder="Nhập loại" value="" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Hình ảnh:</span>
-                <input type="text" id="image" name="image" placeholder="Nhập link hình ảnh" value="" required>
+                <input type="text" id="image" name="image" placeholder="Nhập link hình ảnh" value="" required class="form-control">
             </div>
             <div class="button-sub">
                 <button type="submit" name="postUpdate" class="btn btn-primary">Thêm</button>

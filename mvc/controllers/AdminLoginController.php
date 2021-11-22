@@ -15,7 +15,6 @@
         }
         function LogOut() {
             unset($_SESSION["admin"]);
-            session_destroy();
             header("Location: http://localhost/LT_Web/AdminLogin");
         }
     }

@@ -14,22 +14,22 @@
         <h6 class="text-center" style="margin-top: 2%;">Thông tin bài viết</h6>
         <div class="infor-tab-box px-5">
             <span class="details">Tiêu đề: </span>
-            <input type="text" id="title" name="title" placeholder="Nhập tiêu đề" value="" required>
+            <input type="text" id="title" name="title" placeholder="Nhập tiêu đề" value="" required class="form-control">
         </div>
         <div class="infor-tab-box px-5">
             <span class="details">Từ khóa:</span>
-            <input type="text" id="SEOkey" name="SEOkey" placeholder="Nhập từ khóa" value="" required>
+            <input type="text" id="SEOkey" name="SEOkey" placeholder="Nhập từ khóa" value="" required class="form-control">
         </div>
         <div class="infor-tab-box px-5">
             <span class="details">Mô tả:</span>
-            <input type="text" id="description" name="description" placeholder="Nhập mô tả" value="" required>
+            <input type="text" id="description" name="description" placeholder="Nhập mô tả" value="" required class="form-control">
         </div>
         <div class="infor-tab-box px-5">
             <span class="details">Nội dung:</span>
-            <input type="text" id="content" name="content" placeholder="Nhập nội dung" value="" required>
+            <input type="text" id="content" name="content" placeholder="Nhập nội dung" value="" required class="form-control">
         </div>
         <div class="button-sub">
-            <button type="submit" name="postAdd">Thêm</button>
+            <button type="submit" name="postAdd" class="btn btn-outline-info">Thêm</button>
         </div>
     </form>
 

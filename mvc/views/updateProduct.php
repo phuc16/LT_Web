@@ -15,34 +15,34 @@
             <?php while($row = mysqli_fetch_array($data['ProductId'])) { ?>
             <div class="infor-tab-box px-5">
                 <span class="details">ID: </span>
-                <input type="text" id="id" name="id" value="<?php echo $row['id']?>" readonly>
+                <input type="text" id="id" name="id" value="<?php echo $row['id']?>" readonly class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Tên sản phẩm: </span>
-                <input type="text" id="name" name="name" placeholder="Nhập tên sản phẩm" value="<?php echo $row['name']?>" required>
+                <input type="text" id="name" name="name" placeholder="Nhập tên sản phẩm" value="<?php echo $row['name']?>" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Số lượng:</span>
-                <input type="text" id="quantity" name="quantity" placeholder="Nhập số lượng" value="<?php echo $row['quantity']?>" required>
+                <input type="text" id="quantity" name="quantity" placeholder="Nhập số lượng" value="<?php echo $row['quantity']?>" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Mô tả:</span>
-                <input type="text" id="description" name="description" placeholder="Nhập mô tả" value="<?php echo $row['description']?>" required>
+                <input type="text" id="description" name="description" placeholder="Nhập mô tả" value="<?php echo $row['description']?>" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Giá:</span>
-                <input type="text" id="price" name="price" placeholder="Nhập giá" value="<?php echo $row['price']?>" required>
+                <input type="text" id="price" name="price" placeholder="Nhập giá" value="<?php echo $row['price']?>" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Loại:</span>
-                <input type="text" id="type" name="type" placeholder="Nhập loại" value="<?php echo $row['type']?>" required>
+                <input type="text" id="type" name="type" placeholder="Nhập loại" value="<?php echo $row['type']?>" required class="form-control">
             </div>
             <div class="infor-tab-box px-5">
                 <span class="details">Hình ảnh:</span>
-                <input type="text" id="image" name="image" placeholder="Nhập link hình ảnh" value="<?php echo $row['image']?>" required>
+                <input type="text" id="image" name="image" placeholder="Nhập link hình ảnh" value="<?php echo $row['image']?>" required class="form-control">
             </div>
             <div class="button-sub">
-                <button type="submit" name="postUpdate">Chỉnh sửa</button>
+                <button type="submit" name="postUpdate" class="btn btn-outline-success">Chỉnh sửa</button>
             </div>
             <?php 
                 }

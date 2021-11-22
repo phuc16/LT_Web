@@ -30,7 +30,7 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-member" role="tabpanel" aria-labelledby="v-pills-member-tab">
                         <div class="table-container container">
-                            <h6 class="text-center" style="margin: 2%;">Danh sách nhân viên</h6>
+                            <h4 class="text-center" style="margin: 2%;">Danh sách thành viên</h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -42,111 +42,78 @@
                                             <th scope="col">Ngày sinh</th>
                                             <th scope="col">Số điện thoại</th>
                                             <th scope="col">Mail</th>
-                                            <th scope="col">Avatar</th>
                                             <th scope="col"></th>
                                         </tr>
                                       </thead>
                                       <tbody>
-                                        <tr>
-                                            <td>kogleo</td>
-                                            <td>12345678</td>
-                                            <td>Nguyễn Văn Leo</td>
-                                            <td>M</td>
-                                            <td>18/08/2001</td>
-                                            <td>0123456789</td>
-                                            <td>leonguyen@gmail.com</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                          
-                                        </tr>
-                                        <tr>
-                                            <td>remsokawai</td>
-                                            <td>phuccaothu</td>
-                                            <td>Trương Hoàng Phúc</td>
-                                            <td>M</td>
-                                            <td>12/06/2001</td>
-                                            <td>0981273462</td>
-                                            <td>phuctruong@gmail.com</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                        </tr>
-                                        <tr>
-                                            <td>inuyasha</td>
-                                            <td>banyeumatcho</td>
-                                            <td>Trần Cẩu</td>
-                                            <td>F</td>
-                                            <td>02/06/1998</td>
-                                            <td>0989873462</td>
-                                            <td>inuyasha@gmail.com</td>
-                                            <td>link</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>    
-                                        </tr>
+                                        <?php while($row = mysqli_fetch_array($data["getMember"])){?>
+                                            <tr>
+                                                <td><?php echo $row['username']?></td>
+                                                <td><?php echo $row['password']?></td>
+                                                <td><?php echo $row['name']?></td>
+                                                <td><?php echo $row['gender']?></td>
+                                                <td><?php echo $row['dob']?></td>
+                                                <td><?php echo $row['phone']?></td>
+                                                <td><?php echo $row['email']?></td>
+                                                <td style="width: 10vw" class="d-flex">
+                                                    <form action="./updateMember" method="POST">
+                                                        <input type="text" value="<?php echo $row['username']; ?>" name="username" hidden>
+                                                        <button type="submit" class="btn btn-outline-info btn-sm">Chỉnh sửa</button>
+                                                    </form>
+                                                    &nbsp;
+                                                    <form method="post" style="display: inline">
+                                                        <input type="text" value="<?php echo $row['username']; ?>" name ="username" hidden>
+                                                        <button name="deleteMember" type="submit" class="btn btn-outline-danger btn-sm">Xóa</button>
+                                                    </form>
+                                                </td>  
+                                            
+                                            </tr>
+                                        <?php }?>
                                       </tbody>
                                 </table>
                             </div>
-                            <button type="button" class="btn btn-primary">Thêm</button>
+                            <button type="button" class="btn btn-outline-info"> <a href="./addMember"  class="link-primary" style="text-decoration: none">Thêm</a> </button>
                             
                         </div>
                     </div>
                     <div class="tab-pane fade " id="v-pills-comment" role="tabpanel" aria-labelledby="v-pills-comment-tab">
                         <div class="table-container container">
-                            <h6 class="text-center" style="margin: 2%;">Danh sách bình luận</h6>
+                            <h4 class="text-center" style="margin: 2%;">Danh sách bình luận</h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
-                                            <th scope="col">Thời gian</th>
                                             <th scope="col">Người viết</th>
+                                            <th scope="col">ID bài viết</th>
                                             <th scope="col">Nội dung</th>
-                                            <th scope="col">Bài viết</th>
+                                            <th scope="col">Thời gian</th>
+                                            <th scope="col">Trạng thái</th>
                                             <th scope="col"></th>
                                         </tr>
                                       </thead>
                                       <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>10:00:00</td>
-                                            <td>Nguyễn Văn A</td>
-                                            <td>ABC...</td>
-                                            <td>Bài viết 1</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Duyệt</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                          
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>11:00:00</td>
-                                            <td>Nguyễn Văn B</td>
-                                            <td>XYZ...</td>
-                                            <td>Bài viết 2</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Duyệt</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>12:00:00</td>
-                                            <td>Nguyễn Văn C</td>
-                                            <td>IJK...</td>
-                                            <td>Bài viết 3</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Duyệt</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>    
-                                        </tr>
+                                        <?php while($row = mysqli_fetch_array($data["getComment"])){?>
+                                            <tr>
+                                                <td><?php echo $row['id']?></td>
+                                                <td><?php echo $row['username']?></td>
+                                                <td><?php echo $row['postId']?></td>
+                                                <td><?php echo $row['content']?></td>
+                                                <td><?php echo $row['time']?></td>
+                                                <td><?php 
+                                                        if ( $row['status'] != 0){echo 'Đã duyệt';} else {echo 'Chưa duyệt';};
+                                                    ?>
+                                                </td>
+                                                <td>
+                                                <form method="post">
+                                                    <input type="text" value="<?php echo $row['id']; ?>" name ="id" hidden>
+                                                    <button type="submit" name='acceptComment' class="btn btn-outline-info btn-sm"> Duyệt </button> 
+                                                    <button type="submit" name='deleteComment' class="btn btn-outline-danger btn-sm"> Xóa </button> 
+                                                </form> 
+                                                </td>  
+                                            
+                                            </tr>
+                                            <?php }?>
                                       </tbody>
                                 </table>
                             </div>
@@ -154,22 +121,22 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-info" role="tabpanel" aria-labelledby="v-pills-info-tab">
                         <form class="container" method="post">
-                            <h6 class="text-center" style="margin-top: 2%;">Thông tin liên hệ</h6>
+                            <h4 class="text-center" style="margin-top: 2%;">Thông tin liên hệ</h4>
                             <?php while($row = mysqli_fetch_array($data['Contacts'])) { ?>
                             <div class="infor-tab-box px-5">
                                 <span class="details">Địa chỉ: </span>
-                                <input type="text" id="address" name="address" placeholder="Nhập địa chỉ" value="<?php echo $row['address']?>" required>
+                                <input type="text" id="address" name="address" placeholder="Nhập địa chỉ" class="form-control" value="<?php echo $row['address']?>" required>
                             </div>
                             <div class="infor-tab-box px-5">
                                 <span class="details">Số điện thoại: </span>
-                                <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại" value="<?php echo $row['phone']?>" required>
+                                <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại" class="form-control" value="<?php echo $row['phone']?>" required>
                             </div>
                             <div class="infor-tab-box px-5">
                                 <span class="details">Mail:</span>
-                                <input type="text" id="mail" name="mail" placeholder="Nhập email" value="<?php echo $row['mail']?>" required>
+                                <input type="text" id="mail" name="mail" placeholder="Nhập email" class="form-control" value="<?php echo $row['mail']?>" required>
                             </div>
                             <div class="button-sub">
-                                <button type="submit" name="contactsEdit" class="btn btn-primary">Chỉnh sửa</button>
+                                <button type="submit" name="contactsEdit" class="btn btn-outline-info">Chỉnh sửa</button>
                             </div>
                             <?php 
                                 }
@@ -178,9 +145,9 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-product" role="tabpanel" aria-labelledby="v-pills-product-tab">
                         <div class="table-container list-product">
-                            <h6 class="text-center" style="margin: 2%;">Danh sách sản phẩm</h6>
+                            <h4 class="text-center" style="margin: 2%;">Danh sách sản phẩm</h4>
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" id="example">
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
@@ -189,7 +156,7 @@
                                             <th scope="col" style="width: 35%">Mô tả</th>
                                             <th scope="col" style="width: 5%">Giá</th>
                                             <th scope="col" style="width: 10%">Loại</th>
-                                            <th scope="col" style="width: 15%"></th>
+                                            <th scope="col" style="width: 12%"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -206,6 +173,7 @@
                                                     <input type="text" value="<?php echo $row['id']; ?>" name="id" hidden>
                                                     <button type="submit" class="btn btn-outline-info btn-sm">Chỉnh sửa</button>
                                                 </form>
+                                                &nbsp;
                                                 <form method="POST">
                                                     <input type="text" value="<?php echo $row['id']; ?>" name ="id" hidden>
                                                     <button name="productDelete" type="submit" class="btn btn-outline-danger btn-sm">Xóa</button>
@@ -219,13 +187,13 @@
                                 </table>
                             </div>
                             <form action="./addProduct" method="POST">
-                                <button type="submit" class="btn btn-primary">Thêm</button>
+                                <button type="submit" class="btn btn-outline-info">Thêm</button>
                             </form>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-new" role="tabpanel" aria-labelledby="v-pills-new-tab">
                         <div class="table-container container">
-                            <h6 class="text-center" style="margin: 2%;">Danh sách bài viết</h6>
+                            <h4 class="text-center" style="margin: 2%;">Danh sách bài viết</h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -251,6 +219,7 @@
                                                         <input type="text" value="<?php echo $row['id']; ?>" name="id" hidden>
                                                         <button type="submit" class="btn btn-outline-info btn-sm">Chỉnh sửa</button>
                                                     </form>
+                                                    &nbsp;
                                                     <form method="POST">
                                                         <input type="text" value="<?php echo $row['id']; ?>" name ="id" hidden>
                                                         <button name="postDelete" type="submit" class="btn btn-outline-danger btn-sm">Xóa</button>
@@ -264,60 +233,50 @@
                                 </table>
                             </div>
                             <form action="./addPost" method="POST">
-                                <button type="submit" class="btn btn-primary">Thêm</button>
+                                <button type="submit" class="btn btn-outline-info">Thêm</button>
                             </form>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-material" role="tabpanel" aria-labelledby="v-pills-material-tab">
                         <div class="table-container container">
-                            <h6 class="text-center" style="margin: 2%;">Danh sách tài nguyên</h6>
+                            <h4 class="text-center" style="margin: 2%;">Danh sách tài nguyên</h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">STT</th>
-                                            <th scope="col">Tên</th>
-                                            <th scope="col">Loại tài nguyên</th>
+                                            <th scope="col" tyle="width: 10%">ID</th>
+                                            <th scope="col" style="width: 10%">Tên</th>
+                                            <th scope="col" style="width: 15%">Loại tài nguyên</th>
                                             <th scope="col">Nội dung</th>
                                             <th scope="col"></th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Ảnh 1</td>
-                                            <td>Hình ảnh</td>
-                                            <td>ABC...</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
+                                            <?php while($row = mysqli_fetch_array($data["getResource"])){?>
+                                            <tr>
+                                                <td><?php echo $row['id']?></td>
+                                                <td><?php echo $row['type']?></td>
+                                                <td><?php echo $row['name']?></td>
+                                                <td><?php echo $row['content']?></td>
+                                               
+                                                <td style="width: 10vw" class="d-flex">
+                                                    <form action="./updateResource" method="POST">
+                                                        <input type="text" value="<?php echo $row['id']; ?>" name="id" hidden>
+                                                        <button type="submit" class="btn btn-outline-info btn-sm">Chỉnh sửa</button>
+                                                    </form>
+                                                    &nbsp;
+                                                    <form method="post" style="display: inline-block">
+                                                            <input type="text" value="<?php echo $row['id']; ?>" name ="id" hidden>
+                                                            <button name="deleteResource" type="submit" class="btn btn-outline-danger btn-sm">Xóa</button>
+                                                    </form>
+                                                </td>  
                                             
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Ảnh 2</td>
-                                            <td>Hình ảnh</td>
-                                            <td>XYZ...</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>  
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Bài viết 1</td>
-                                            <td>Bài viết</td>
-                                            <td>IJK...</td>
-                                            <td>
-                                                <a href="#" class="link-primary">Chỉnh sửa</a> |
-                                                <a href="#" class="link-primary">Xóa</a>
-                                            </td>    
-                                        </tr>
+                                            </tr>
+                                            <?php }?>
                                         </tbody>
                                 </table>
                             </div>
-                            <button type="button" class="btn btn-primary">Thêm</button>
+                            <button type="button" class="btn btn-outline-info"> <a href="./addResource"  class="link-primary" style="text-decoration: none">Thêm</a> </button>
                             
                         </div>
                     </div>

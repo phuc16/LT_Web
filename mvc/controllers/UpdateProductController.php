@@ -1,9 +1,15 @@
 <?php
     class UpdateProductController extends Controller {
         function Show() {     
-            $updateProduct = $this->model('UpdateProductModel');       
+            $updateProduct = $this->model('UpdateProductModel'); 
+            $productId = "";
+            if (isset($_POST['id'])) {
+                $productId = $_POST['id'];
+            } else {
+                echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
+            }
             $this->view("updateProduct", [
-                'ProductId'=>$updateProduct->getProductId($_POST['id'])
+                'ProductId'=>$updateProduct->getProductId($productId)
             ]);
             
             if(isset($_POST['postUpdate'])) {
