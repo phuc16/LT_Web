@@ -8,8 +8,9 @@
             } else {
                 echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
             }
+            $intro = $this->model("IntroModel");
             $this->view("updateProduct", [
-                'ProductId'=>$updateProduct->getProductId($productId)
+                'ProductId'=>$updateProduct->getProductId($productId), "LogoTitle"=>$intro->getLogo()
             ]);
             
             if(isset($_POST['postUpdate'])) {
@@ -23,7 +24,7 @@
                 // echo "<script>console.log(\"Debug Objects: " . $price . " \" );</script>";
                 if(strlen($name) > 0 && strlen($name) <= 255 && strlen($price) > 0 && preg_match('/^[0-9]+$/i', $price) && strlen($image) > 0 && strlen($type) > 0 && strlen($type) <= 20 && strlen($quantity) > 0 && preg_match('/^[0-9]+$/i', $quantity) && strlen($description) > 0) {
                     $updateProduct->updateProduct($id, $name, $price, $image, $type, $quantity, $description);
-                    header('Location: ./admin');
+                    echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
                 }
                 else echo   '<div class="text-danger text-center">
                                 <strong>Invalid input!</strong>

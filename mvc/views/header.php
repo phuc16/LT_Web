@@ -3,7 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Mona Company</title>
-        <link rel="shortcut icon" href="http://mauweb.monamedia.net/vmax/wp-content/uploads/2019/05/Mona-designstyle-colors-m.png">
+        <?php while($row = mysqli_fetch_array($data["LogoTitle"])){?>
+        <link rel="shortcut icon" href="<?php echo $row['content']?>">
+        <?php
+        }
+        ?>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
@@ -12,6 +16,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
         <link href="./public/css/style.css" rel="stylesheet">
+        <script>
+            if ( window.history.replaceState ) {
+                window.history.replaceState( null, null, window.location.href );
+            }
+        </script>
     </head>
     <body>
         <!--Header-->
@@ -33,7 +42,10 @@
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./home" style="align-items: center;"><img src="http://mauweb.monamedia.net/vmax/wp-content/uploads/2019/05/Mona-designstyle-colors-m.png" style="width: 18%;"></a>
+                <?php while($row = mysqli_fetch_array($data["LogoBrand"])){?>
+                <a class="navbar-brand" href="./home" style="align-items: center;"><img src="<?php echo $row['content']?>" style="width: 18%;"></a>
+                <?php
+                }?>
                 <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

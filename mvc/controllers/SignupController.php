@@ -1,7 +1,8 @@
 <?php
     class SignupController extends Controller {
         function Show() {
-            $this->view("signup", []);
+            $intro = $this->model("IntroModel");
+            $this->view("signup", ["LogoTitle"=>$intro->getLogo()]);
             if (isset($_POST["signup"])) {
                 // Validate
 

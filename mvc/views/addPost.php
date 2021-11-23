@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mona company</title>
+    <title>Mona Company</title>
+    <link rel="shortcut icon" href="http://mauweb.monamedia.net/vmax/wp-content/uploads/2019/05/Mona-designstyle-colors-m.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="./public/css/admin.css" rel="stylesheet">
@@ -27,6 +28,10 @@
         <div class="infor-tab-box px-5">
             <span class="details">Nội dung:</span>
             <input type="text" id="content" name="content" placeholder="Nhập nội dung" value="" required class="form-control">
+        </div>
+        <div class="infor-tab-box px-5">
+            <span class="details">Hình ảnh:</span>
+            <input type="text" id="image" name="image" placeholder="Nhập hình ảnh" value="" required class="form-control">
         </div>
         <div class="button-sub">
             <button type="submit" name="postAdd" class="btn btn-outline-info">Thêm</button>

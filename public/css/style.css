@@ -454,6 +454,106 @@
     width: 70%;
     height: 100%;
 }
+
+.centent_new {
+    background-color: rgb(240, 239, 239);
+}
+
+.return_news h5 {
+    margin-top: 5px;
+}
+
+.return_news h5 a:link {
+    color: rgb(156, 156, 156);
+    text-decoration: none;
+}
+
+.return_news h5 a:hover {
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header_news h2{
+    font-weight: 550;
+}
+
+.main_news {
+    padding-top: 10px;
+}
+
+.main_news p {
+    text-align: justify;
+}
+
+.center_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.comment {
+    margin-top: 20px;
+    padding-left: 0.5%;
+}
+
+.comment h4 {
+    display: inline-block;
+}
+
+#total_cmt {
+    font-size: 20px;
+}
+
+.text_cmt textarea {
+    width: 100%;
+    height: 50px;
+    max-height: 50px;
+    margin-top: 10px;
+}
+
+.all_cmt {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+}
+
+.item_cmt{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 20%;
+    max-height: fit-content;
+}
+
+.ava_cmt {
+    margin: 0 10px 0 0;
+    float: left;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.time_cmt p{
+    float: inherit;
+    margin: 0 10px 0 0;
+    font-size: small;
+    height: auto;
+    color: #777;
+}
+
+.user_name h6{
+    float: left;
+    font-weight: bold;
+    margin: 3px 10px 0 0;
+}
+
+.cont_cmt h6{
+    float: inherit;
+    margin: 3px 0 0 0;
+}
+
 /* EDIT PROFILE TAB */
 
 .profile .content 
@@ -687,4 +787,16 @@
         width: 80%;
         margin-bottom: 10%;
     }
+}
+
+.btn-link {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: black;
+    padding: 0;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
 }

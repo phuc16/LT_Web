@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <div class="row" style="margin-bottom: -3.5%;">
+            <div class="row" style="margin-bottom: -3.5%; margin-top: 1%">
                 <div class="col-md-6">
                     <p>SẢN PHẨM</p>
                 </div>
@@ -19,8 +19,9 @@
             <hr>
             <div class="row">
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-outline-success">← Tiếp tục xem sản phẩm</button>
-                    <button type="button" class="btn btn-outline-success">Cập nhật giỏ hàng</button>
+                    <form action="./printingInk">
+                    <button type="submit" class="btn btn-outline-success">← Tiếp tục xem sản phẩm</button>
+                    </form> 
                 </div>
                 <div class="col-md-4">
                     
@@ -29,7 +30,7 @@
             <br>
         </div>
         <div class="col-md-4">
-            <div class="row" style="margin-bottom: -7%;">
+            <div class="row" style="margin-bottom: -7%; margin-top: 2%">
                 <div class="col-md-12">
                     <p>TỔNG SỐ LƯỢNG</p>
                 </div>

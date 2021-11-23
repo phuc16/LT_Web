@@ -35,21 +35,46 @@
             </nav>
         </aside>
         <div class="col-md-9 col-sm-12">
-            <div class="row">
+        <?php
+            while($row = mysqli_fetch_array($data["post"])) { ?>
+            <div class="row centent_new" style="padding: 2%">
+                <div class="header_news">
+                    <h2><?php echo $row["title"]?></h2>
+                </div>
+                <div class="main_news">
+                    <?php echo $row["content"]?>
+                </div>
+            </div>
+        <?php
+            }
+        ?>
+            <div class="comment">
+                <h5>Ý kiến (<label id="total_cmt"><?php echo mysqli_num_rows($data["comments"])?></label>)</h5>
+            </div>
+            <form method="post">
+                <div class="text_cmt purple-border" >
+                    <textarea placeholder="Ý kiến của bạn" class="form-control" name="comment"></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-success btn-sm" style="margin-top: 1%">Gửi bình luận</button>
+            <form>
+            <div class="all_cmt">
                 <?php
-                while($row = mysqli_fetch_array($data["posts"])) {?>
-                <div class="card col-sm-4 col-6" style="padding: 0;">
-                    <img class="card-img-top" src="<?php echo $row['image']?>" alt="Image" style="width:100%">
-                    <div class="card-body">
-                        <div class="card-text text-center">
-                            <form action="./detailnews" method="post">
-                                <input type="hidden" name="postId" value="<?php echo $row['id']?>">
-                                <button class="btn-link" type="submit"><?php echo $row['title']?></button>
-                            </form>
-                        </div>
+                while($row = mysqli_fetch_array($data["comments"])) { ?>
+                <div class="item_cmt">
+                    <div class="ava_cmt">
+                        <img src="<?php echo $row['avatar']?>" width="25px">
+                    </div>
+                    <div class="time_cmt">
+                        <p><?php echo $row['time']?></p>
+                    </div>
+                    <div class="user_name">
+                        <h6><?php echo $row['username']?></h6>
+                    </div>
+                    <div class="cont_cmt">
+                        <h6><?php echo $row['content']?></h6>
                     </div>
                 </div>
-                <?php 
+                <?php
                 }
                 ?>
             </div>

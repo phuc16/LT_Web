@@ -3,7 +3,8 @@
         function Show() { 
             if (isset($_SESSION["admin"])) {
                 $admin = $this->model('AdminModel');
-                $this->view("admin", [
+                $intro = $this->model("IntroModel");
+                $this->view("admin", ["LogoTitle"=>$intro->getLogo(),
                     'Contacts'=>$admin->getContacts(),
                     'Products'=>$admin->getProducts(),
                     'Posts'=>$admin->getPosts(),

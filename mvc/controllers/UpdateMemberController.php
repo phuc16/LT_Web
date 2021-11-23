@@ -8,8 +8,9 @@
             } else {
                 echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
             }
+            $intro = $this->model("IntroModel");
             $this->view("updateMember", [
-                'Member'=>$updateMember->getMember($username)
+                'Member'=>$updateMember->getMember($username), "LogoTitle"=>$intro->getLogo()
             ]);
             
             if(isset($_POST['MemberUpdate'])) {

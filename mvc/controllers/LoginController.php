@@ -1,7 +1,8 @@
 <?php
     class LoginController extends Controller {
         function Show() {
-            $this->view("login", []);
+            $intro = $this->model("IntroModel");
+            $this->view("login", ["LogoTitle"=>$intro->getLogo()]);
             if (isset($_POST["submit"])) {
                 $login = $this->model("LoginModel"); 
                 $username = $_POST["username"];

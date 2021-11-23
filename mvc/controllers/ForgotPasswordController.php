@@ -1,7 +1,8 @@
 <?php
     class ForgotPasswordController extends Controller {
         function Show() {
-            $this->view("forgotPassword", []);
+            $intro = $this->model("IntroModel");
+            $this->view("forgotPassword", ["LogoTitle"=>$intro->getLogo()]);
         }
     }
 ?>

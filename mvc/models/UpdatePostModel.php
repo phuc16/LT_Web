@@ -6,8 +6,8 @@
             return mysqli_query($this->con, $query);
         }
 
-        public function updatePost($id, $title, $SEOkey, $description, $content) {
-            $query = "UPDATE posts SET title = '$title', SEOkey = '$SEOkey', description = '$description', content = '$content' WHERE id = '$id';";
+        public function updatePost($id, $title, $SEOkey, $description, $content, $image) {
+            $query = "UPDATE posts SET title = '$title', SEOkey = '$SEOkey', description = '$description', content = '$content', image = '$image' WHERE id = '$id';";
             mysqli_query($this->con, $query);
         }
     }

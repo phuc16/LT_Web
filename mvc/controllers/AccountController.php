@@ -3,7 +3,8 @@
         function Show() {
             if (isset($_SESSION["username"])) {
                 $account = $this->model("AccountModel");
-                $this->view("header", []);
+                $intro = $this->model("IntroModel");
+                $this->view("header", ["LogoTitle"=>$intro->getLogo(), "LogoBrand"=>$intro->getLogo()]);
                 $this->view("content", ["Page"=>"account",
                                         "Account"=>$account->getInfo()]);
                 $this->view("footer", []);

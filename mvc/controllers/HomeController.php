@@ -1,7 +1,8 @@
 <?php
     class HomeController extends Controller {
         function Show() {
-            $this->view("header", []);
+            $intro = $this->model("IntroModel");
+            $this->view("header", ["LogoTitle"=>$intro->getLogo(), "LogoBrand"=>$intro->getLogo()]);
             $this->view("slider", []);
             $this->view("footer", []);
         }
