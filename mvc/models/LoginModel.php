@@ -8,7 +8,10 @@
             if (mysqli_num_rows($result)) {
                 return true;
             }
-            return false;
+            else
+            {
+                echo "<script type='text/javascript'>alert('Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại');</script>";
+            }
         }
     }
 ?>
