@@ -29,5 +29,9 @@
             $query = "SELECT * FROM resources WHERE name = 'Logo'";
             return mysqli_query($this->con, $query);
         }
+        public function getContact() {
+            $query = "SELECT * FROM contacts WHERE id = 1";
+            return mysqli_query($this->con, $query);
+        }
     }
 ?>

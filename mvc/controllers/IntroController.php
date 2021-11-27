@@ -7,7 +7,7 @@
                                     , "Care"=>$intro->customerCare(), "Warranty"=>$intro->warrantyService()
                                     , "Quality"=>$intro->internationalQuality(), "Maintenance"=>$intro->maintenance()
                                     , "Logo"=>$intro->getLogo()]);
-            $this->view("footer", []);
+            $this->view("footer", ["Contact"=>$intro->getContact()]);
         }
     }
 ?>

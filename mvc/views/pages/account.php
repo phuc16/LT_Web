@@ -27,7 +27,7 @@
                             <!-- Modal footer -->
                             <div class="modal-footer">
                                 <input type="submit" class="btn btn-secondary btn-sm" value="Cập nhật" name="changeAvatar">
-                                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Đóng</button>
                             </div>
                             </form>
                         </div>

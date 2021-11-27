@@ -7,7 +7,7 @@
                 $this->view("header", ["LogoTitle"=>$intro->getLogo(), "LogoBrand"=>$intro->getLogo()]);
                 $this->view("content", ["Page"=>"account",
                                         "Account"=>$account->getInfo()]);
-                $this->view("footer", []);
+                $this->view("footer", ["Contact"=>$intro->getContact()]);
                 if (isset($_POST["updateInfo"])) {
                     $name = $_POST["name"];
                     $dob = $_POST["dob"];

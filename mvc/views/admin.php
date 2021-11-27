@@ -150,7 +150,7 @@
                     <div class="tab-pane fade" id="v-pills-product" role="tabpanel" aria-labelledby="v-pills-product-tab">
                         <div class="table-container list-product">
                             <h4 class="text-center" style="margin: 2%;">Danh sách sản phẩm</h4>
-                            <div class="table-responsive">
+                            <div class="table-responsive" style="overflow: scroll; max-height: 400px">
                                 <table class="table" id="example">
                                     <thead>
                                         <tr>
@@ -190,6 +190,7 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <br>
                             <form action="./addProduct" method="POST">
                                 <button type="submit" class="btn btn-outline-info">Thêm</button>
                             </form>

@@ -1,31 +1,47 @@
 .top-header {
-    height: 3em; background-color: black; text-align: right; padding-right: 2%;
+    height: 3em;
+    background-color: black;
+    text-align: right;
+    padding-right: 2%;
 }
+
 .top-header-content:link {
-    line-height: 3em; text-decoration: none; color: #777;
+    line-height: 3em;
+    text-decoration: none;
+    color: #777;
 }
+
 .top-header-content:visited {
-    line-height: 3em; text-decoration: none; color: #777;
+    line-height: 3em;
+    text-decoration: none;
+    color: #777;
 }
+
 .top-header-content:hover {
-    line-height: 3em; text-decoration: none; color: #25a8ea;
+    line-height: 3em;
+    text-decoration: none;
+    color: #25a8ea;
 }
+
 .navbar {
     padding-bottom: 0px;
 }
+
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
     outline: none;
     box-shadow: none;
 }
+
+
 /*Slider*/
+
 .carousel-caption {
     top: 50%;
     color: black;
     bottom: auto;
 }
-
 
 * {
     margin: 0;
@@ -171,6 +187,7 @@
 .nav .search-box .search-txt::placeholder {
     color: azure;
 }
+
 
 /* SALE-PRODUCT*/
 
@@ -361,54 +378,69 @@
 .business-info-bg {
     background-color: #333333;
 }
+
 .business-info {
-    color: white; font-family: Roboto; font-weight: bold; font-size: large;
+    color: white;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: large;
     padding-top: 20%;
 }
+
 .register-bg {
     background-color: #b8653e;
 }
+
 .top-product-1 {
     margin-left: 2%;
     width: 20%;
 }
+
 .top-product-2 {
-    margin-left: 2%; 
+    margin-left: 2%;
     margin-top: 5%;
     width: 20%;
 }
+
 .payment {
     padding-left: 5%;
     width: 20%;
 }
+
 .form-register-padding {
     padding: 10%;
 }
+
 .info {
-    font-family: Roboto; 
-    font-weight: bold; 
+    font-family: Roboto;
+    font-weight: bold;
     font-size: large;
     padding-top: 10%;
 }
+
 .margin-contact-register-button {
     margin-top: 3%;
     margin-bottom: 3%;
 }
+
 .form-group {
     margin-top: 2%;
 }
+
 .contact-info-font {
     margin-top: 2%;
     font-family: Roboto;
-    font-weight: bold; 
+    font-weight: bold;
     font-size: large;
 }
+
 .card {
     width: 300px;
     margin-left: 2%;
     margin-bottom: 2%;
 }
-.card-text a{
+
+.card-text a {
     color: black;
 }
 
@@ -420,13 +452,15 @@
     text-decoration: none;
     color: cyan;
 }
+
+
 /* VERTICAL NAV PILL */
-.nav-pill-container
-{
+
+.nav-pill-container {
     margin-top: 0.5vh;
 }
-.nav-pill-container .d-flex
-{
+
+.nav-pill-container .d-flex {
     position: relative;
     background-color: #ddd;
     width: 80vw;
@@ -434,8 +468,8 @@
     left: 50%;
     transform: translateX(-50%);
 }
-.nav-pill-container .nav-link
-{
+
+.nav-pill-container .nav-link {
     height: 25%;
     width: 100%;
     font-size: 1.2rem;
@@ -444,13 +478,13 @@
     font-weight: bold;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     color: #fff;
     background-color: gray!important;
 }
 
-.tab-content
-{
+.tab-content {
     width: 70%;
     height: 100%;
 }
@@ -474,7 +508,7 @@
     font-weight: bold;
 }
 
-.header_news h2{
+.header_news h2 {
     font-weight: 550;
 }
 
@@ -520,7 +554,7 @@
     overflow: auto;
 }
 
-.item_cmt{
+.item_cmt {
     width: 100%;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -535,7 +569,7 @@
     border-radius: 50%;
 }
 
-.time_cmt p{
+.time_cmt p {
     float: inherit;
     margin: 0 10px 0 0;
     font-size: small;
@@ -543,81 +577,117 @@
     color: #777;
 }
 
-.user_name h6{
+.user_name h6 {
     float: left;
     font-weight: bold;
     margin: 3px 10px 0 0;
 }
 
-.cont_cmt h6{
+.cont_cmt h6 {
     float: inherit;
     margin: 3px 0 0 0;
 }
 
+.cart_head {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    padding-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: #777;
+    border-bottom-width: 1px;
+}
+
+.cart_content {
+    margin-bottom: 10px;
+    padding: 5px 0px;
+}
+
+.image_name a img {
+    width: 60px;
+    padding-left: 5px;
+}
+
+.name_product_cart {
+    padding-left: 5px;
+    font-size: small;
+    margin-left: 2%;
+}
+
+.center_text {
+    margin: auto;
+}
+
+.price_cart {
+    font-size: small;
+}
+
+.total_cart {
+    font-size: small;
+}
+
+.input-number {
+    width: 50%;
+}
+
+.quantity_cart input {
+    width: 50%;
+}
+
+
 /* EDIT PROFILE TAB */
 
-.profile .content 
-{
+.profile .content {
     display: flex;
     padding-top: 5vh;
     justify-content: space-evenly;
-    
 }
 
-.profile .content > div
-{
+.profile .content>div {
     height: 100%;
 }
-.profile .edit-info
-{
+
+.profile .edit-info {
     width: 78%;
-   
 }
-.profile .edit-info > div
-{
+
+.profile .edit-info>div {
     align-items: center;
     display: flex;
     padding-bottom: 6vh;
     width: 100%;
     font-size: 1.2rem;
-    
 }
 
-.profile .edit-info > div a
-{
+.profile .edit-info>div a {
     font-size: 0.8rem;
     padding-left: 2vh;
-    color: blue;    
+    color: blue;
 }
-.profile .edit-info .label
-{
+
+.profile .edit-info .label {
     width: 30%;
     text-align: right;
-    color: rgba(85,85,85,.8);
+    color: rgba(85, 85, 85, .8);
     text-transform: capitalize;
     overflow: hidden;
-
 }
 
-.profile .edit-info .data
-{
+.profile .edit-info .data {
     text-align: left;
     padding-left: 2vh;
 }
-.profile .edit-info .input-data
-{
-    padding-left: 2vh;  
+
+.profile .edit-info .input-data {
+    padding-left: 2vh;
     height: 200%;
 }
 
-.profile .edit-info .name input
-{
+.profile .edit-info .name input {
     height: 4vh;
-    width: 30vw ;
+    width: 30vw;
 }
 
-.profile .edit-info .save button
-{
+.profile .edit-info .save button {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -628,87 +698,80 @@
     border: none;
 }
 
-.profile .edit-info .save button:hover
-{
-    background-color:blue;
+.profile .edit-info .save button:hover {
+    background-color: blue;
 }
 
-
-.profile .edit-ava
-{
+.profile .edit-ava {
     padding-left: 0vh;
     position: relative;
 }
-.profile .edit-ava .avatar
-{
+
+.profile .edit-ava .avatar {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
-
 }
-.profile .edit-ava img
-{
-    
+
+.profile .edit-ava img {
     width: 12vh;
     height: 12vh;
     border-radius: 50%;
     border: 1px solid black;
-    
 }
-.profile .edit-ava .btn
-{
+
+.profile .edit-ava .btn {
     position: relative;
     width: 100%;
     height: 100%;
     align-items: center;
-
 }
-.profile .edit-ava button
-{
+
+.profile .edit-ava button {
     position: relative;
     width: 12vh!important;
     background-color: gray;
-    
     border: none;
     text-align: center;
-    
 }
 
-.profile .edit-ava button:hover
-{
-    
+.profile .edit-ava button:hover {
     background-color: blue;
 }
 
+
 /* BOOTSTRAP EDIT FOR PROFILE */
+
 .form-check-input:checked {
     background-color: gray!important;
     border-color: gray!important;
 }
 
-/* BOOTSTRAP EDIT FOR PASSWORD */  
+
+/* BOOTSTRAP EDIT FOR PASSWORD */
+
 .password .form-control {
     width: 90%!important;
     margin-bottom: 1rem;
-}  
+}
 
-.password button
-{
+.password button {
     background-color: gray;
     border: none;
 }
 
-.password button:hover
-{
+.password button:hover {
     background-color: blue;
 }
+
 @media screen and (min-width: 1024px) {
     .nav-left {
         padding-left: 10%;
     }
 }
+
 @media screen and (max-width: 1280px) {
     .card {
         width: 300px;
@@ -719,6 +782,7 @@
         margin-bottom: 5%;
     }
 }
+
 @media screen and (max-width: 1024px) {
     .side {
         display: none;
@@ -726,7 +790,6 @@
     .card {
         width: 300px;
         height: 350px;
-        
         margin-left: auto;
         margin-left: 27%;
         margin-right: auto;
@@ -734,6 +797,7 @@
         margin-bottom: 2%;
     }
 }
+
 @media screen and (max-width: 767px) {
     .side {
         display: none;
@@ -747,6 +811,7 @@
         margin-bottom: 10%;
     }
 }
+
 @media screen and (max-width: 450px) {
     .side {
         display: none;
@@ -799,4 +864,10 @@
     text-decoration: none;
     font-family: inherit;
     font-size: inherit;
+}
+
+@media only screen and (max-width: 800px) {
+    .unit-price {
+        display: none;
+    }
 }

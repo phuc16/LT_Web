@@ -43,8 +43,10 @@
                                 <span style="color: red">
                                 <?php echo number_format($row["price"]) . " VNĐ"?>
                                 </span>
-                                <br>
-                                <button type="button" class="btn btn-success btn-sm">Thêm vào giỏ</button>
+                                <form method="post" class="text-center">
+                                    <input type="hidden" name="addToCart" value="<?php echo $row['id']?>">
+                                    <button type="submit" class="btn btn-success btn-sm">Thêm vào giỏ</button>
+                                </form>
                             </p>
                         </div>
                     </div>

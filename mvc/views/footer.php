@@ -26,10 +26,13 @@
                     <div class="col-md-3">
                         <div class="row">
                             <h4 class="info">THÔNG TIN LIÊN HỆ</h4>
-                            <p><span class="fas fa-map-marker-alt"></span> C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</p>
-                            <p><span class="fas fa-phone-square-alt"></span> 076 922 0162</p>
-                            <p><span class="fas fa-envelope"></span> demonhunterg@gmail.com
-                                mon@mona.media</p>
+                            <?php while($row = mysqli_fetch_array($data["Contact"])){?>
+                            <p><span class="fas fa-map-marker-alt"></span> <?php echo $row['address']?></p>
+                            <p><span class="fas fa-phone-square-alt"></span> <?php echo $row['phone']?></p>
+                            <p><span class="fas fa-envelope"></span>  <?php echo $row['mail']?></p>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                     <div class="col-md-3">

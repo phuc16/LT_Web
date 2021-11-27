@@ -11,7 +11,7 @@
                 $this->view("content", ["Page"=>"detailNews", "titles"=>$news->getPosts(), "posts"=>$news->getPosts()
                                         , "post"=>$news->getPostId($_SESSION['postId']), 
                                         "comments"=>$news->getComments($_SESSION['postId'])]);
-                $this->view("footer", []);
+                $this->view("footer", ["Contact"=>$intro->getContact()]);
                 if (isset($_POST["comment"])) {
                     if (isset($_SESSION["username"])) {
                         $news->addComment($_SESSION['username'], $_SESSION['postId'], $_POST['comment']);

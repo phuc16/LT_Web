@@ -5,7 +5,7 @@
             $intro = $this->model("IntroModel");
             $this->view("header", ["LogoTitle"=>$intro->getLogo(), "LogoBrand"=>$intro->getLogo()]);
             $this->view("content", ["Page"=>"news", "titles"=>$news->getPosts(), "posts"=>$news->getPosts()]);
-            $this->view("footer", []);
+            $this->view("footer", ["Contact"=>$intro->getContact()]);
         }
     }
 ?>
