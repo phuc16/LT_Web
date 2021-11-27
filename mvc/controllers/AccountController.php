@@ -20,9 +20,13 @@
                 if (isset($_POST["changePassword"])) {
                     $password = $_POST["password"];
                     $rePassword = $_POST["rePassword"];
-                    if (!(empty($password) or empty($password))) {
+                    if (!(empty($password) or empty($rePassword))) {
                         if ($password == $rePassword) {
                             $account->changePassword($password);
+                        }
+                        else
+                        {
+                            echo "<script type='text/javascript'>alert('Mật khẩu không trùng khớp');</script>";
                         }
                     }
                     echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/Account">';
