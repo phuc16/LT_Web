@@ -14,9 +14,9 @@
                 {
                      echo "<script type='text/javascript'>alert('username đã tồn tại');</script>";
                 } 
-                else(
+                else{
                     echo "<script type='text/javascript'>alert('Đăng kí thất bại');</script>";
-                )
+                }
                 return false;
             }
             
