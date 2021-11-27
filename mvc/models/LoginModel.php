@@ -3,7 +3,9 @@
 
         public function verifyLogin($username, $password) {
             $query = "SELECT * FROM members WHERE username = '$username' AND password = '$password'";
-            if (mysqli_query($this->con, $query)) {
+            $result = mysqli_query($this->con, $query);
+
+            if (mysqli_num_rows($result)) {
                 return true;
             }
             return false;
