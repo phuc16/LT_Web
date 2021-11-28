@@ -5,8 +5,16 @@
             $technologyEquipment = $this->model("ProductsModel");
             $intro = $this->model("IntroModel");
             $this->view("header", ["LogoTitle"=>$intro->getLogo(), "LogoBrand"=>$intro->getLogo()]);
-            $this->view("content", ["Page"=>"technologyEquipment",
+            if (isset($_POST["technologyEquipmentSearch"])) {
+                $search = $_POST["technologyEquipmentSearchInput"];
+                $this->view("content", ["Page"=>"technologyEquipment", 
+                "TechnologyEquipment"=>$technologyEquipment->searchTechnologyEquipment($search),
+                "Search"=>$search]);
+            }
+            else {
+                $this->view("content", ["Page"=>"technologyEquipment", 
                                     "TechnologyEquipment"=>$technologyEquipment->getTechnologyEquipment()]);
+            }
             $this->view("footer", ["Contact"=>$intro->getContact()]);
             if (isset($_POST["addToCart"])) {
                 if (isset($_SESSION["username"])) {

@@ -7,14 +7,14 @@
     </div>
     <div class="row">
         <aside class="col-md-3 side">
-            <div class="input-group">
+            <form method="post" action="" class="input-group">
                 <div class="form-outline">
-                    <input type="search" class="form-control px-2" placeholder="Tìm kiếm..."/>
+                    <input type="search" name="printingInkSearchInput" class="form-control px-2" placeholder="Tìm kiếm..." value="<?php if (isset($_POST["printingInkSearch"])) echo $data['Search']?>"/>
                 </div>
-                <button type="button" class="btn btn-success">
+                <button type="submit" class="btn btn-success" name="printingInkSearch">
                     <i class="fas fa-search"></i>
                 </button>
-            </div>
+            </form>
             <h5 style="margin-top: 5%;">DANH MỤC</h5>
             <nav>
                 <div class="row">
@@ -32,6 +32,11 @@
         </aside>
         <div class="col-md-9 col-sm-12">
             <div class="row">
+                <?php if (isset($_POST["printingInkSearch"])){?>
+                    <p>Có <?php echo $data["PrintingInk"]->num_rows?> kết quả phù hợp với tìm kiếm</p>
+                <?php 
+                    }
+                ?> 
                 <?php
                     while($row = mysqli_fetch_array($data["PrintingInk"])) {?>
                         <div class="card col-sm-4 col-md-3">

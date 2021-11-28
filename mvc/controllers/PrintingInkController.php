@@ -5,8 +5,16 @@
             $printingInk = $this->model("ProductsModel");
             $intro = $this->model("IntroModel");
             $this->view("header", ["LogoTitle"=>$intro->getLogo(), "LogoBrand"=>$intro->getLogo()]);
-            $this->view("content", ["Page" => "printingInk", 
-                                    "PrintingInk" => $printingInk->getPrintingInk()]);
+            if (isset($_POST["printingInkSearch"])) {
+                $search = $_POST["printingInkSearchInput"];
+                $this->view("content", ["Page"=>"printingInk", 
+                "PrintingInk"=>$printingInk->searchPrintingInk($search),
+                "Search"=>$search]);
+            }
+            else {
+                $this->view("content", ["Page"=>"printingInk", 
+                                    "PrintingInk"=>$printingInk->getPrintingInk()]);
+            }
             $this->view("footer", ["Contact"=>$intro->getContact()]);
             if (isset($_POST["addToCart"])) {
                 if (isset($_SESSION["username"])) {
