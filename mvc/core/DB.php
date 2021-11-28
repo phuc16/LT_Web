@@ -3,7 +3,7 @@
         public $con;
         protected $servername = "localhost";
         protected $username = "root";
-        protected $password = "";
+        protected $password = "anhentai";
         protected $dbname = "ltweb";
 
         function __construct() {
