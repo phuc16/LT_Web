@@ -38,6 +38,10 @@
                 // DELETE MEMBER
                 if (isset($_POST['deleteMember'])){
                     $username = $_POST['username'];
+                    if (isset($_SESSION["username"])) {
+                        if ($_SESSION["username"] == $username)
+                            unset($_SESSION["username"]);
+                    }
                     $admin->deleteMember($username);
                     echo '<meta http-equiv="refresh" content="0; URL=http://localhost/LT_Web/admin">';
                 
