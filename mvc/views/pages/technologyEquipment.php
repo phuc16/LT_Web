@@ -32,7 +32,7 @@
         </aside>
         <div class="col-md-9 col-sm-12">
             <div class="row">
-                <?php if (isset($_POST["technologyEquipmentSearch"])){?>
+                <?php if (isset($_POST["technologyEquipmentSearch"]) && $_POST["technologyEquipmentSearchInput"] != ''){?>
                     <p>Có <?php echo $data["TechnologyEquipment"]->num_rows?> kết quả phù hợp với tìm kiếm</p>
                 <?php 
                     }

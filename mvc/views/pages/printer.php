@@ -32,7 +32,7 @@
         </aside>
         <div class="col-md-9 col-sm-12">
             <div class="row">
-                <?php if (isset($_POST["printerSearch"])){?>
+                <?php if (isset($_POST["printerSearch"]) && $_POST["printerSearchInput"] != ''){?>
                     <p>Có <?php echo $data["Printer"]->num_rows?> kết quả phù hợp với tìm kiếm</p>
                 <?php 
                     }
