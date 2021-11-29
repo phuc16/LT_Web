@@ -22,7 +22,6 @@ Update informations of your connection in `./mvc/core/DB.php`
     protected $username = "root";
     protected $password = "";
     protected $dbname = "ltweb";
-});
 ```
 
 ### Go to browser
