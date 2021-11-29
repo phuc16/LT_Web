@@ -7,8 +7,8 @@ Author: Nguyễn Hoàng Minh Châu, Phạm Ngọc Hậu, Trương Hoàng Phúc, 
 
 ### Setup file
 
-git clone https://github.com/remsokawaii1/LT_Web.git
-cd LT_Web 
+    git clone https://github.com/remsokawaii1/LT_Web.git
+    cd LT_Web 
 
 ### Change document root of XAMPP to folder contain LT_Web
 
