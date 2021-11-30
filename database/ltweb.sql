@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `ltweb`
 --
+create database ltweb;
+use ltweb;
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `admins`
+--
+
+CREATE TABLE `admins` (
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `admins`
+--
+
+INSERT INTO `admins` (`username`, `password`) VALUES
+('admin', '12345');
 
 -- --------------------------------------------------------
 
