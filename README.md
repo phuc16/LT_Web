@@ -26,7 +26,7 @@ Update informations of your connection in `./mvc/core/DB.php`
 
 ### Go to browser
 * [Guest and Member role](http://localhost/LT_web/home)
-* [Admin role](http://localhost/LT_web/admin)
+* [Admin role](http://localhost/LT_web/admin) (username: admin, password: 12345)
 
 ## Learn More
 You can learn more in our [Github Repository](https://github.com/remsokawaii1/LT_Web).
